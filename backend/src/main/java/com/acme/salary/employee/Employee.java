@@ -70,9 +70,11 @@ public class Employee {
     @JoinColumn(name = "currency_code", nullable = false, columnDefinition = "CHAR(3)")
     private Currency currency;
 
+    @Generated(event = EventType.INSERT)
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @Generated(event = {EventType.INSERT, EventType.UPDATE})
     @Column(name = "updated_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime updatedAt;
 
