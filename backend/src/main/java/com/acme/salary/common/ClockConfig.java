@@ -1,6 +1,7 @@
 package com.acme.salary.common;
 
 import com.acme.salary.domain.EmployeeValidator;
+import com.acme.salary.domain.SalaryChangePolicy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,5 +23,10 @@ public class ClockConfig {
     @Bean
     public EmployeeValidator employeeValidator(Clock clock) {
         return new EmployeeValidator(clock);
+    }
+
+    @Bean
+    public SalaryChangePolicy salaryChangePolicy() {
+        return new SalaryChangePolicy();
     }
 }
