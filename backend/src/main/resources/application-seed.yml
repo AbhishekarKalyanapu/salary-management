@@ -1,0 +1,4 @@
+# Activated with the "seed" profile: run as a one-shot job with no web server, then exit.
+spring:
+  main:
+    web-application-type: none
