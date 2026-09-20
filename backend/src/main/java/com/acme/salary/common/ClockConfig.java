@@ -1,6 +1,7 @@
 package com.acme.salary.common;
 
 import com.acme.salary.domain.EmployeeValidator;
+import com.acme.salary.domain.OutlierDetector;
 import com.acme.salary.domain.SalaryChangePolicy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,5 +29,10 @@ public class ClockConfig {
     @Bean
     public SalaryChangePolicy salaryChangePolicy() {
         return new SalaryChangePolicy();
+    }
+
+    @Bean
+    public OutlierDetector outlierDetector() {
+        return new OutlierDetector();
     }
 }

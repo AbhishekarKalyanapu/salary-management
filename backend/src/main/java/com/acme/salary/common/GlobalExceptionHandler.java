@@ -54,4 +54,11 @@ public class GlobalExceptionHandler {
         problem.setTitle("Conflict");
         return problem;
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ProblemDetail handleIllegalArgument(IllegalArgumentException ex) {
+        ProblemDetail problem = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage());
+        problem.setTitle("Bad request");
+        return problem;
+    }
 }
