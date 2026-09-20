@@ -17,7 +17,7 @@ public class Department {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "name", nullable = false, length = 100, unique = true)
+    @Column(name = "name", nullable = false, length = 100, unique = true, columnDefinition = "NVARCHAR(100)")
     private String name;
 
     protected Department() {

@@ -20,7 +20,7 @@ public class JobTitle {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "title", nullable = false, length = 150, unique = true)
+    @Column(name = "title", nullable = false, length = 150, unique = true, columnDefinition = "NVARCHAR(150)")
     private String title;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

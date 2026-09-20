@@ -14,10 +14,10 @@ import java.time.LocalDate;
 public class Currency {
 
     @Id
-    @Column(name = "code", length = 3, nullable = false)
+    @Column(name = "code", length = 3, nullable = false, columnDefinition = "CHAR(3)")
     private String code;
 
-    @Column(name = "rate_to_usd", nullable = false, precision = 18, scale = 6)
+    @Column(name = "rate_to_usd", nullable = false, precision = 18, scale = 6, columnDefinition = "DECIMAL(18,6)")
     private BigDecimal rateToUsd;
 
     @Column(name = "as_of", nullable = false)

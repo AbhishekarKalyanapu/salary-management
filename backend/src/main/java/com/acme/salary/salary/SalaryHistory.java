@@ -31,20 +31,20 @@ public class SalaryHistory {
     private Employee employee;
 
     /** NULL for the initial record. */
-    @Column(name = "old_salary", precision = 18, scale = 2)
+    @Column(name = "old_salary", precision = 18, scale = 2, columnDefinition = "DECIMAL(18,2)")
     private BigDecimal oldSalary;
 
-    @Column(name = "new_salary", nullable = false, precision = 18, scale = 2)
+    @Column(name = "new_salary", nullable = false, precision = 18, scale = 2, columnDefinition = "DECIMAL(18,2)")
     private BigDecimal newSalary;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "currency_code", nullable = false)
+    @JoinColumn(name = "currency_code", nullable = false, columnDefinition = "CHAR(3)")
     private Currency currency;
 
     @Column(name = "effective_date", nullable = false)
     private LocalDate effectiveDate;
 
-    @Column(name = "reason", length = 255)
+    @Column(name = "reason", length = 255, columnDefinition = "NVARCHAR(255)")
     private String reason;
 
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)

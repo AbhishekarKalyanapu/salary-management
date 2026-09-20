@@ -34,17 +34,17 @@ public class Employee {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "first_name", nullable = false, length = 100)
+    @Column(name = "first_name", nullable = false, length = 100, columnDefinition = "NVARCHAR(100)")
     private String firstName;
 
-    @Column(name = "last_name", nullable = false, length = 100)
+    @Column(name = "last_name", nullable = false, length = 100, columnDefinition = "NVARCHAR(100)")
     private String lastName;
 
-    @Column(name = "email", nullable = false, length = 255, unique = true)
+    @Column(name = "email", nullable = false, length = 255, unique = true, columnDefinition = "NVARCHAR(255)")
     private String email;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "country_code", nullable = false)
+    @JoinColumn(name = "country_code", nullable = false, columnDefinition = "CHAR(2)")
     private Country country;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -56,18 +56,18 @@ public class Employee {
     private JobTitle jobTitle;
 
     /** 1 (junior) .. 6 (executive) */
-    @Column(name = "level", nullable = false)
+    @Column(name = "level", nullable = false, columnDefinition = "TINYINT")
     private Integer level;
 
     @Column(name = "hire_date", nullable = false)
     private LocalDate hireDate;
 
     /** Annual, in local currency. The source of truth; see {@code currency}. */
-    @Column(name = "salary", nullable = false, precision = 18, scale = 2)
+    @Column(name = "salary", nullable = false, precision = 18, scale = 2, columnDefinition = "DECIMAL(18,2)")
     private BigDecimal salary;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "currency_code", nullable = false)
+    @JoinColumn(name = "currency_code", nullable = false, columnDefinition = "CHAR(3)")
     private Currency currency;
 
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
@@ -76,13 +76,13 @@ public class Employee {
     @Column(name = "updated_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime updatedAt;
 
-    /**
-     * SQL Server ROWVERSION for optimistic concurrency. It is DB-generated on every
-     * write, never set by the application, hence insertable/updatable = false.
-     */
+    /** SQL Server ROWVERSION column: an 8-byte value the database generates and
+     *  increments on every write. Never set by the application. Note: SQL Server's
+     *  own metadata reports this column's type as "timestamp" (ROWVERSION is a
+     *  legacy alias for that type), which is what Hibernate's validator needs to see. */
     @Version
     @Generated(event = {EventType.INSERT, EventType.UPDATE})
-    @Column(name = "row_version", insertable = false, updatable = false)
+    @Column(name = "row_version", insertable = false, updatable = false, columnDefinition = "timestamp")
     private byte[] rowVersion;
 
     protected Employee() {

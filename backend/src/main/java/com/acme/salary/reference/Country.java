@@ -14,14 +14,14 @@ import jakarta.persistence.Table;
 public class Country {
 
     @Id
-    @Column(name = "code", length = 2, nullable = false)
+    @Column(name = "code", length = 2, nullable = false, columnDefinition = "CHAR(2)")
     private String code;
 
-    @Column(name = "name", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100, columnDefinition = "NVARCHAR(100)")
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "currency_code", nullable = false)
+    @JoinColumn(name = "currency_code", nullable = false, columnDefinition = "CHAR(3)")
     private Currency currency;
 
     protected Country() {
