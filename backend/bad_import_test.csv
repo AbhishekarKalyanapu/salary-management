@@ -1,0 +1,2 @@
+firstName,lastName,email,countryCode,currencyCode,departmentId,jobTitleId,level,hireDate,salary
+,BadRow,not-an-email,US,USD,999,1,2,not-a-date,abc

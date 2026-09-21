@@ -1,0 +1,2 @@
+firstName,lastName,email,countryCode,currencyCode,departmentId,jobTitleId,level,hireDate,salary
+ImportTest,Person,importtest.person@acme.example,US,USD,1,1,2,2024-06-01,90000

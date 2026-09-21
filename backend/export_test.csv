@@ -1,0 +1,617 @@
+id,firstName,lastName,email,countryCode,countryName,departmentId,departmentName,jobTitleId,jobTitleTitle,level,hireDate,salary,currencyCode
+17,Priyanka,Ng,priyanka.ng@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,2,2018-01-22,63200.00,SGD
+19,Meera,Davies,meera.davies@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2019-01-30,176000.00,SGD
+20,Vikram,Wong,vikram.wong@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2013-03-31,51900.00,SGD
+34,Sara,Rao,sara.rao@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2017-07-18,87600.00,SGD
+37,Isabella,Oliveira,isabella.oliveira@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,1,2023-04-09,66800.00,SGD
+55,Lena,Pereira,lena.pereira@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2021-05-31,192000.00,SGD
+56,Mateus,Davies,mateus.davies@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2024-07-30,110000.00,SGD
+61,Liam,Johnson,liam.johnson@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2013-01-08,94600.00,SGD
+75,Rahul,Silva,rahul.silva@acme.example,SG,Singapore,3,Design,12,UI Designer,1,2023-02-07,55200.00,SGD
+92,Fatima,Lee,fatima.lee2@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2022-02-04,95900.00,SGD
+96,Priyanka,Roy,priyanka.roy@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2019-04-04,77200.00,SGD
+121,Mia,Roy,mia.roy2@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,3,2015-05-28,81500.00,SGD
+137,Felix,Nguyen,felix.nguyen@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,4,2022-10-23,87100.00,SGD
+160,Lucas,Weber,lucas.weber@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2014-07-02,48700.00,SGD
+168,Camila,Fischer,camila.fischer@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2012-02-11,102000.00,SGD
+176,Aarav,Wilson,aarav.wilson@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2015-11-26,120800.00,SGD
+182,Felix,Wilson,felix.wilson@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,3,2021-01-29,62100.00,SGD
+199,Oliver,Weber,oliver.weber@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,2,2021-07-10,76800.00,SGD
+206,Noah,Mueller,noah.mueller@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,2,2017-07-20,67000.00,SGD
+208,Aarav,Wilson,aarav.wilson2@acme.example,SG,Singapore,3,Design,14,Design Manager,5,2015-12-18,143700.00,SGD
+210,Lukas,Costa,lukas.costa@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2015-10-14,110100.00,SGD
+270,Priyanka,Iyer,priyanka.iyer@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,4,2014-07-04,99600.00,SGD
+273,Gabriel,Santos,gabriel.santos2@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2022-02-13,65100.00,SGD
+282,Mei,Sharma,mei.sharma@acme.example,SG,Singapore,8,Human Resources,40,HR Coordinator,2,2016-05-25,46400.00,SGD
+284,Felix,Clarke,felix.clarke@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,5,2012-02-28,99100.00,SGD
+319,Charlotte,Oliveira,charlotte.oliveira@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,3,2017-09-17,74300.00,SGD
+336,Fatima,Rao,fatima.rao@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,4,2025-03-24,98600.00,SGD
+352,Kenji,Wagner,kenji.wagner@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,2,2012-04-21,74100.00,SGD
+356,Lukas,Kim,lukas.kim@acme.example,SG,Singapore,5,Sales,21,Account Executive,5,2024-10-02,130800.00,SGD
+390,Jun,Lee,jun.lee@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2013-09-08,103000.00,SGD
+391,Jun,Nguyen,jun.nguyen2@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2021-09-26,98200.00,SGD
+435,Camila,Santos,camila.santos2@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2023-09-09,107400.00,SGD
+439,Priyanka,Pereira,priyanka.pereira@acme.example,SG,Singapore,3,Design,12,UI Designer,4,2022-02-21,102400.00,SGD
+459,Kenji,Weber,kenji.weber@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2025-04-03,104900.00,SGD
+460,Vikram,Weber,vikram.weber@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2013-11-01,103200.00,SGD
+461,Kenji,Becker,kenji.becker@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2025-05-04,79200.00,SGD
+495,Jonas,Nair,jonas.nair2@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2017-10-19,102400.00,SGD
+537,Wei,Becker,wei.becker@acme.example,SG,Singapore,2,Product,6,Product Manager,5,2017-10-30,148800.00,SGD
+544,Priyanka,Smith,priyanka.smith@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2024-12-14,90100.00,SGD
+570,Gabriel,Nguyen,gabriel.nguyen2@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2017-11-25,83500.00,SGD
+579,Meera,Mueller,meera.mueller@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,4,2012-03-06,94100.00,SGD
+586,Lucas,Roy,lucas.roy@acme.example,SG,Singapore,3,Design,11,UX Designer,1,2024-05-28,68200.00,SGD
+597,Mia,Kim,mia.kim@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,2,2013-06-11,88800.00,SGD
+607,Meera,Souza,meera.souza@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2025-06-08,230000.00,SGD
+613,Mia,Wagner,mia.wagner@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,2,2014-06-19,58600.00,SGD
+621,Lukas,Gupta,lukas.gupta@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,2,2014-06-09,77500.00,SGD
+633,Ananya,Wilson,ananya.wilson@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,4,2021-11-21,102700.00,SGD
+642,Fatima,Williams,fatima.williams2@acme.example,SG,Singapore,3,Design,15,Content Designer,3,2024-10-01,75600.00,SGD
+651,Beatriz,Davies,beatriz.davies@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2018-10-09,60500.00,SGD
+653,Gabriel,Williams,gabriel.williams@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2021-08-17,104000.00,SGD
+661,Gabriel,Johnson,gabriel.johnson3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2021-02-03,72500.00,SGD
+662,Olivia,Brown,olivia.brown2@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,3,2024-10-30,82600.00,SGD
+663,James,Ng,james.ng@acme.example,SG,Singapore,3,Design,15,Content Designer,1,2023-01-27,54400.00,SGD
+679,Aarav,Reddy,aarav.reddy@acme.example,SG,Singapore,8,Human Resources,38,Compensation Analyst,5,2024-04-24,90600.00,SGD
+681,Noah,Sharma,noah.sharma@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2026-02-04,77800.00,SGD
+698,Noah,Smith,noah.smith@acme.example,SG,Singapore,7,Finance,34,Payroll Specialist,1,2020-09-27,49500.00,SGD
+705,Beatriz,Johnson,beatriz.johnson@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,2,2013-05-30,76000.00,SGD
+713,Ananya,Tan,ananya.tan2@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,3,2012-03-21,92500.00,SGD
+716,Wei,Gupta,wei.gupta@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2019-02-26,75700.00,SGD
+731,Sneha,Taylor,sneha.taylor@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2020-11-15,103100.00,SGD
+763,Hannah,Becker,hannah.becker@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2019-02-06,97800.00,SGD
+766,Omar,Tan,omar.tan@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,2,2023-09-30,69300.00,SGD
+783,Isabella,Evans,isabella.evans2@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,5,2012-08-14,122500.00,SGD
+786,Omar,Martin,omar.martin2@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2016-02-23,179600.00,SGD
+809,Rahul,Reddy,rahul.reddy2@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2015-04-20,49400.00,SGD
+820,Sneha,Schmidt,sneha.schmidt2@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,3,2024-08-09,81800.00,SGD
+822,Sneha,Oliveira,sneha.oliveira@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,4,2014-06-08,82900.00,SGD
+857,Hannah,Oliveira,hannah.oliveira@acme.example,SG,Singapore,2,Product,8,Business Analyst,2,2016-01-24,68700.00,SGD
+881,Sneha,Fischer,sneha.fischer@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,1,2014-09-14,42300.00,SGD
+885,Sara,Evans,sara.evans2@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2024-11-26,49700.00,SGD
+900,Meera,Becker,meera.becker2@acme.example,SG,Singapore,8,Human Resources,40,HR Coordinator,2,2012-02-13,44200.00,SGD
+961,Mateus,Kim,mateus.kim@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2021-06-23,111400.00,SGD
+991,Noah,Santos,noah.santos3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2018-01-22,95800.00,SGD
+1008,Sophia,Evans,sophia.evans3@acme.example,SG,Singapore,2,Product,8,Business Analyst,1,2022-05-14,59400.00,SGD
+1011,Mateus,Silva,mateus.silva2@acme.example,SG,Singapore,3,Design,14,Design Manager,6,2012-12-10,168200.00,SGD
+1012,James,Roy,james.roy2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,5,2014-09-15,147100.00,SGD
+1020,Aarav,Ng,aarav.ng@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2024-02-05,165900.00,SGD
+1021,Mateus,Wagner,mateus.wagner@acme.example,SG,Singapore,6,Marketing,29,Brand Manager,5,2018-12-05,104100.00,SGD
+1063,Meera,Sharma,meera.sharma3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2021-01-24,115300.00,SGD
+1100,Vikram,Reddy,vikram.reddy@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2015-07-03,81700.00,SGD
+1105,Emma,Tan,emma.tan@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2023-02-10,47600.00,SGD
+1113,Liam,Silva,liam.silva3@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2014-08-13,91100.00,SGD
+1148,Charlotte,Brown,charlotte.brown@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2013-12-13,97100.00,SGD
+1159,Sara,Gupta,sara.gupta@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,5,2013-08-27,121200.00,SGD
+1178,Arjun,Lee,arjun.lee2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2025-12-14,82800.00,SGD
+1182,Wei,Tan,wei.tan@acme.example,SG,Singapore,3,Design,14,Design Manager,4,2026-04-18,133600.00,SGD
+1190,Felix,Schmidt,felix.schmidt2@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,4,2014-07-02,82400.00,SGD
+1203,Gabriel,Wagner,gabriel.wagner2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2016-07-05,103000.00,SGD
+1205,Oliver,Lee,oliver.lee2@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,3,2016-05-25,62700.00,SGD
+1224,Oliver,Becker,oliver.becker4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2019-09-15,136300.00,SGD
+1250,Arjun,Brown,arjun.brown@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2017-04-30,58700.00,SGD
+1282,Sara,Nair,sara.nair2@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2025-10-11,103300.00,SGD
+1283,Rahul,Tan,rahul.tan@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,3,2026-03-26,73200.00,SGD
+1294,Priyanka,Wong,priyanka.wong@acme.example,SG,Singapore,8,Human Resources,39,Talent Acquisition Manager,4,2023-05-18,89500.00,SGD
+1297,Liam,Roy,liam.roy@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2019-06-03,125300.00,SGD
+1309,Emma,Wong,emma.wong2@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,1,2024-03-25,58800.00,SGD
+1313,Ananya,Schmidt,ananya.schmidt@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,4,2015-10-18,102100.00,SGD
+1316,James,Singh,james.singh@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,5,2015-06-05,110200.00,SGD
+1354,Mei,Patel,mei.patel@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2019-01-28,88900.00,SGD
+1364,Hannah,Wilson,hannah.wilson2@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2018-02-15,69200.00,SGD
+1387,Sara,Fischer,sara.fischer@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2021-04-08,77900.00,SGD
+1388,Daniel,Wagner,daniel.wagner2@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2020-03-10,106800.00,SGD
+1464,Fatima,Jones,fatima.jones2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2023-02-08,79400.00,SGD
+1470,Lena,Iyer,lena.iyer@acme.example,SG,Singapore,3,Design,14,Design Manager,4,2016-03-07,124600.00,SGD
+1485,Olivia,Wong,olivia.wong@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2012-01-01,87800.00,SGD
+1495,Sophia,Fischer,sophia.fischer@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2019-09-23,94700.00,SGD
+1547,Isabella,Silva,isabella.silva@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,4,2024-10-25,147500.00,SGD
+1572,Sara,Roy,sara.roy2@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2026-01-28,53800.00,SGD
+1595,Kenji,Silva,kenji.silva@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2020-12-02,91500.00,SGD
+1619,Isabella,Schmidt,isabella.schmidt@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2024-12-27,150100.00,SGD
+1628,Mei,Weber,mei.weber@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2014-05-24,147700.00,SGD
+1665,Ananya,Becker,ananya.becker2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2014-02-15,76300.00,SGD
+1684,Vikram,Lee,vikram.lee@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,2,2019-08-14,100700.00,SGD
+1697,Kenji,Ng,kenji.ng@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2017-06-26,131300.00,SGD
+1704,Hannah,Brown,hannah.brown4@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,2,2013-03-20,107600.00,SGD
+1734,Rahul,Brown,rahul.brown2@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,2,2024-11-05,66700.00,SGD
+1744,Ethan,Mueller,ethan.mueller2@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2016-01-03,102000.00,SGD
+1769,Camila,Clarke,camila.clarke4@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2013-01-07,109200.00,SGD
+1781,Lena,Silva,lena.silva@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2019-03-22,119400.00,SGD
+1787,Kenji,Chen,kenji.chen2@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2024-11-25,109600.00,SGD
+1824,Daniel,Schmidt,daniel.schmidt@acme.example,SG,Singapore,3,Design,12,UI Designer,5,2016-09-13,102800.00,SGD
+1828,Sara,Lee,sara.lee2@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2019-07-03,80500.00,SGD
+1865,Chloe,Wilson,chloe.wilson2@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,2,2020-12-12,67400.00,SGD
+1906,Priyanka,Gupta,priyanka.gupta3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,5,2015-12-08,146000.00,SGD
+1912,Jun,Brown,jun.brown@acme.example,SG,Singapore,3,Design,12,UI Designer,4,2017-12-26,91300.00,SGD
+1921,Sneha,Sharma,sneha.sharma3@acme.example,SG,Singapore,2,Product,6,Product Manager,4,2017-05-13,129200.00,SGD
+1937,Emma,Rao,emma.rao3@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2024-07-16,178100.00,SGD
+1940,Oliver,Pereira,oliver.pereira@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,5,2013-06-18,113900.00,SGD
+1944,Lukas,Kim,lukas.kim3@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2013-05-22,63700.00,SGD
+1961,Fatima,Lee,fatima.lee4@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2026-06-09,91000.00,SGD
+1964,Wei,Clarke,wei.clarke2@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,1,2017-10-22,60000.00,SGD
+1972,Fatima,Chen,fatima.chen@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2025-07-04,166100.00,SGD
+1980,Vikram,Schmidt,vikram.schmidt4@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,3,2014-08-23,88800.00,SGD
+1988,Emma,Roy,emma.roy4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2025-04-12,125400.00,SGD
+1992,Camila,Reddy,camila.reddy4@acme.example,SG,Singapore,3,Design,11,UX Designer,5,2021-04-03,116100.00,SGD
+1996,Hannah,Costa,hannah.costa2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,1,2012-10-09,76100.00,SGD
+2001,Rahul,Gupta,rahul.gupta2@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2021-09-13,94100.00,SGD
+2007,Rahul,Chen,rahul.chen2@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,4,2020-01-30,94600.00,SGD
+2013,Emma,Jones,emma.jones2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2021-02-17,90000.00,SGD
+2027,Wei,Schmidt,wei.schmidt2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2017-02-06,79700.00,SGD
+2040,Rahul,Williams,rahul.williams@acme.example,SG,Singapore,2,Product,8,Business Analyst,2,2012-02-18,69200.00,SGD
+2041,Hui,Oliveira,hui.oliveira@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2026-05-19,130000.00,SGD
+2061,Jonas,Becker,jonas.becker2@acme.example,SG,Singapore,5,Sales,21,Account Executive,4,2012-07-25,131700.00,SGD
+2073,Jonas,Jones,jonas.jones4@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2021-06-26,71500.00,SGD
+2077,Jun,Costa,jun.costa2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,2,2014-11-23,96700.00,SGD
+2081,Olivia,Johnson,olivia.johnson2@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2015-05-11,101700.00,SGD
+2094,Priyanka,Wong,priyanka.wong2@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,2,2014-03-27,63200.00,SGD
+2096,Charlotte,Mueller,charlotte.mueller2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2021-11-02,108700.00,SGD
+2117,Priyanka,Costa,priyanka.costa2@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,2,2025-05-29,75000.00,SGD
+2132,Liam,Iyer,liam.iyer4@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2015-11-28,90500.00,SGD
+2137,Gabriel,Williams,gabriel.williams5@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,3,2020-02-06,71700.00,SGD
+2138,Meera,Weber,meera.weber@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,4,2015-05-12,104100.00,SGD
+2171,Arjun,Rao,arjun.rao@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,4,2012-10-04,121600.00,SGD
+2180,Fatima,Lim,fatima.lim5@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2012-01-13,103700.00,SGD
+2192,Sara,Clarke,sara.clarke5@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2012-03-29,85100.00,SGD
+2213,Beatriz,Lee,beatriz.lee3@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,3,2021-01-27,84600.00,SGD
+2216,Fatima,Johnson,fatima.johnson3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2015-12-25,108600.00,SGD
+2222,Olivia,Gupta,olivia.gupta@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,1,2018-01-21,51300.00,SGD
+2239,Charlotte,Fischer,charlotte.fischer@acme.example,SG,Singapore,2,Product,6,Product Manager,4,2018-10-11,119900.00,SGD
+2260,Jun,Nguyen,jun.nguyen5@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,4,2026-05-28,138800.00,SGD
+2312,Charlotte,Sharma,charlotte.sharma3@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,4,2026-06-03,136200.00,SGD
+2317,Jun,Smith,jun.smith3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2013-01-30,79900.00,SGD
+2327,Ethan,Singh,ethan.singh@acme.example,SG,Singapore,2,Product,8,Business Analyst,4,2024-05-07,91600.00,SGD
+2353,Charlotte,Rao,charlotte.rao2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2023-12-09,76100.00,SGD
+2355,Lukas,Brown,lukas.brown2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2026-07-13,98300.00,SGD
+2371,Camila,Nair,camila.nair2@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,3,2015-12-03,88900.00,SGD
+2388,Wei,Gupta,wei.gupta5@acme.example,SG,Singapore,3,Design,11,UX Designer,4,2019-11-30,110900.00,SGD
+2404,Rahul,Clarke,rahul.clarke@acme.example,SG,Singapore,3,Design,13,UX Researcher,1,2019-01-17,74500.00,SGD
+2407,Fatima,Singh,fatima.singh2@acme.example,SG,Singapore,3,Design,11,UX Designer,4,2013-03-31,82900.00,SGD
+2428,Arjun,Singh,arjun.singh3@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2021-07-15,88100.00,SGD
+2439,Liam,Pereira,liam.pereira5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2013-02-15,91300.00,SGD
+2445,Beatriz,Reddy,beatriz.reddy3@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2014-06-18,65400.00,SGD
+2456,Oliver,Sharma,oliver.sharma5@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,1,2012-03-31,54600.00,SGD
+2457,Sara,Gupta,sara.gupta4@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,2,2017-10-28,48900.00,SGD
+2468,Priyanka,Weber,priyanka.weber4@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2020-12-06,92900.00,SGD
+2480,Wei,Sharma,wei.sharma2@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2024-11-25,68000.00,SGD
+2501,Charlotte,Rao,charlotte.rao3@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2017-11-11,53700.00,SGD
+2504,Kenji,Mueller,kenji.mueller3@acme.example,SG,Singapore,3,Design,11,UX Designer,1,2026-05-07,64000.00,SGD
+2505,Lukas,Iyer,lukas.iyer2@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,4,2025-10-16,88800.00,SGD
+2511,Camila,Tan,camila.tan2@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,4,2020-11-07,86500.00,SGD
+2527,Omar,Davies,omar.davies@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,5,2012-03-09,156000.00,SGD
+2548,Noah,Tan,noah.tan@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2017-01-09,77100.00,SGD
+2550,Rahul,Oliveira,rahul.oliveira2@acme.example,SG,Singapore,7,Finance,34,Payroll Specialist,4,2018-10-02,71200.00,SGD
+2628,Ananya,Wilson,ananya.wilson4@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2013-09-24,88800.00,SGD
+2638,Aarav,Wagner,aarav.wagner3@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,4,2024-10-07,68300.00,SGD
+2645,Camila,Gupta,camila.gupta@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2016-08-27,112700.00,SGD
+2654,Charlotte,Souza,charlotte.souza3@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2021-03-29,77200.00,SGD
+2665,Isabella,Martin,isabella.martin6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2025-12-09,128600.00,SGD
+2675,James,Nair,james.nair5@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,1,2015-12-14,61300.00,SGD
+2684,Meera,Singh,meera.singh@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2014-03-20,71100.00,SGD
+2687,James,Costa,james.costa2@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,4,2024-05-04,113100.00,SGD
+2718,Charlotte,Costa,charlotte.costa2@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,1,2018-05-23,51100.00,SGD
+2722,Priyanka,Evans,priyanka.evans3@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,4,2021-10-18,153700.00,SGD
+2738,Meera,Williams,meera.williams2@acme.example,SG,Singapore,3,Design,13,UX Researcher,2,2021-01-03,76400.00,SGD
+2743,Hui,Kim,hui.kim3@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,3,2016-03-03,80000.00,SGD
+2756,Jun,Taylor,jun.taylor@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2021-10-09,110200.00,SGD
+2762,Gabriel,Lee,gabriel.lee2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,3,2025-10-02,102400.00,SGD
+2765,Hui,Evans,hui.evans4@acme.example,SG,Singapore,2,Product,8,Business Analyst,1,2018-12-04,51800.00,SGD
+2772,Vikram,Ng,vikram.ng2@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2017-12-16,161200.00,SGD
+2781,Aarav,Nguyen,aarav.nguyen2@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2024-06-01,122800.00,SGD
+2791,Beatriz,Sharma,beatriz.sharma4@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,6,2019-10-15,177900.00,SGD
+2817,James,Ng,james.ng2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,5,2013-03-04,165200.00,SGD
+2872,Sophia,Taylor,sophia.taylor6@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,6,2017-06-28,188700.00,SGD
+2892,Lucas,Silva,lucas.silva2@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2019-06-10,92900.00,SGD
+2895,Sneha,Souza,sneha.souza2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,1,2016-09-26,85200.00,SGD
+2909,Jun,Tan,jun.tan@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2018-05-03,96400.00,SGD
+2931,Priyanka,Williams,priyanka.williams2@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2016-09-17,41300.00,SGD
+2936,Mateus,Brown,mateus.brown2@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2013-01-01,85200.00,SGD
+2996,Ethan,Wagner,ethan.wagner@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2012-03-02,82800.00,SGD
+2999,Meera,Singh,meera.singh2@acme.example,SG,Singapore,3,Design,13,UX Researcher,3,2017-04-11,93400.00,SGD
+3010,Charlotte,Weber,charlotte.weber@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2024-05-15,94800.00,SGD
+3014,Daniel,Sharma,daniel.sharma2@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,3,2023-03-15,107600.00,SGD
+3021,Lukas,Davies,lukas.davies2@acme.example,SG,Singapore,3,Design,15,Content Designer,3,2018-06-15,77900.00,SGD
+3023,Priya,Weber,priya.weber@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2021-03-12,83900.00,SGD
+3025,Fatima,Souza,fatima.souza2@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,3,2013-12-25,79800.00,SGD
+3026,Mateus,Johnson,mateus.johnson4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2026-07-17,107800.00,SGD
+3032,Emma,Wagner,emma.wagner@acme.example,SG,Singapore,7,Finance,33,Controller,5,2021-12-21,124400.00,SGD
+3042,Arjun,Martin,arjun.martin3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2020-03-14,156200.00,SGD
+3047,Priya,Weber,priya.weber2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,2,2023-08-15,108200.00,SGD
+3054,Ananya,Wilson,ananya.wilson5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2015-09-18,104100.00,SGD
+3064,Priya,Davies,priya.davies2@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,4,2015-06-15,87600.00,SGD
+3137,Rahul,Nguyen,rahul.nguyen3@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,3,2020-05-18,67800.00,SGD
+3156,Aarav,Reddy,aarav.reddy2@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2018-12-09,75900.00,SGD
+3159,Daniel,Wilson,daniel.wilson6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2024-03-19,127000.00,SGD
+3186,Priyanka,Sharma,priyanka.sharma3@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,3,2015-08-19,60400.00,SGD
+3195,Arjun,Martin,arjun.martin4@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,2,2012-02-07,54600.00,SGD
+3199,Oliver,Weber,oliver.weber3@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2014-03-02,175200.00,SGD
+3206,Meera,Taylor,meera.taylor2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2020-02-09,88400.00,SGD
+3209,Mei,Jones,mei.jones4@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2016-03-23,55000.00,SGD
+3215,Beatriz,Fischer,beatriz.fischer3@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2022-06-17,71200.00,SGD
+3232,Kenji,Singh,kenji.singh2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2013-11-18,92300.00,SGD
+3245,Jun,Chen,jun.chen4@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,4,2016-06-12,138500.00,SGD
+3246,Mia,Patel,mia.patel3@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2017-10-27,98200.00,SGD
+3275,Sara,Oliveira,sara.oliveira5@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2012-02-05,98300.00,SGD
+3301,Liam,Becker,liam.becker5@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,4,2020-11-09,96200.00,SGD
+3304,Lena,Silva,lena.silva4@acme.example,SG,Singapore,8,Human Resources,38,Compensation Analyst,5,2018-12-13,86600.00,SGD
+3338,Sophia,Nair,sophia.nair5@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2024-11-08,123300.00,SGD
+3340,Jun,Singh,jun.singh@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2024-01-26,65200.00,SGD
+3352,Liam,Gupta,liam.gupta@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2013-08-20,88200.00,SGD
+3367,Isabella,Martin,isabella.martin7@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,3,2021-10-23,109500.00,SGD
+3379,Camila,Reddy,camila.reddy7@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,5,2026-04-10,128500.00,SGD
+3400,Fatima,Pereira,fatima.pereira4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2024-09-11,77800.00,SGD
+3415,Vikram,Davies,vikram.davies5@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2021-11-03,58800.00,SGD
+3426,Meera,Lim,meera.lim3@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2024-11-29,78800.00,SGD
+3431,Priya,Sharma,priya.sharma@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2014-11-05,81200.00,SGD
+3439,Lukas,Williams,lukas.williams2@acme.example,SG,Singapore,3,Design,12,UI Designer,2,2023-03-23,67000.00,SGD
+3457,Meera,Martin,meera.martin2@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2017-06-23,50900.00,SGD
+3458,Liam,Tan,liam.tan4@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,3,2018-06-15,122400.00,SGD
+3460,Camila,Roy,camila.roy4@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,3,2023-04-10,71400.00,SGD
+3463,Lena,Clarke,lena.clarke2@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2022-08-03,105400.00,SGD
+3508,Hui,Mueller,hui.mueller5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2018-10-15,109200.00,SGD
+3517,Oliver,Weber,oliver.weber4@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2022-04-12,91600.00,SGD
+3519,Lena,Souza,lena.souza@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,3,2014-12-02,86100.00,SGD
+3534,Hannah,Weber,hannah.weber4@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2021-07-25,118800.00,SGD
+3540,Jun,Chen,jun.chen6@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,1,2017-11-17,58000.00,SGD
+3541,Chloe,Souza,chloe.souza5@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,3,2017-08-20,69200.00,SGD
+3570,Oliver,Wagner,oliver.wagner@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2016-01-04,128100.00,SGD
+3580,Oliver,Johnson,oliver.johnson2@acme.example,SG,Singapore,3,Design,15,Content Designer,4,2014-06-05,81100.00,SGD
+3601,Hannah,Taylor,hannah.taylor4@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,4,2017-06-15,86100.00,SGD
+3606,Priya,Chen,priya.chen5@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2023-02-25,93200.00,SGD
+3623,Wei,Becker,wei.becker5@acme.example,SG,Singapore,3,Design,13,UX Researcher,2,2025-03-24,72800.00,SGD
+3629,Sophia,Roy,sophia.roy@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2023-12-03,116600.00,SGD
+3634,Mia,Reddy,mia.reddy2@acme.example,SG,Singapore,5,Sales,21,Account Executive,5,2014-04-09,119900.00,SGD
+3641,Olivia,Brown,olivia.brown6@acme.example,SG,Singapore,3,Design,11,UX Designer,4,2024-03-15,103300.00,SGD
+3661,Felix,Kim,felix.kim3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2021-02-26,99400.00,SGD
+3671,Emma,Lee,emma.lee@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2021-11-24,105400.00,SGD
+3678,Kenji,Chen,kenji.chen5@acme.example,SG,Singapore,6,Marketing,29,Brand Manager,4,2026-04-17,96600.00,SGD
+3739,Lena,Gupta,lena.gupta2@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,2,2024-10-06,63500.00,SGD
+3789,Lena,Nair,lena.nair2@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2014-03-06,179900.00,SGD
+3810,Mia,Nguyen,mia.nguyen2@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2016-09-30,104200.00,SGD
+3821,Oliver,Schmidt,oliver.schmidt4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2025-02-08,106900.00,SGD
+3822,Mei,Lee,mei.lee3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2020-12-27,93100.00,SGD
+3826,Olivia,Kim,olivia.kim3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2018-02-01,132000.00,SGD
+3831,Liam,Lee,liam.lee2@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,3,2017-07-28,81800.00,SGD
+3835,Liam,Jones,liam.jones4@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,3,2024-07-30,62700.00,SGD
+3843,Priya,Brown,priya.brown5@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2021-12-09,75000.00,SGD
+3863,Lucas,Wilson,lucas.wilson@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2015-02-19,115300.00,SGD
+3903,James,Reddy,james.reddy3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2016-03-18,131300.00,SGD
+3912,Lena,Fischer,lena.fischer3@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,3,2012-08-26,64500.00,SGD
+3913,Sophia,Mueller,sophia.mueller2@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,2,2023-12-26,41200.00,SGD
+3968,Hui,Reddy,hui.reddy5@acme.example,SG,Singapore,2,Product,6,Product Manager,4,2025-07-24,111100.00,SGD
+4029,Fatima,Souza,fatima.souza5@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2018-09-17,101100.00,SGD
+4034,Ethan,Ng,ethan.ng5@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,3,2012-06-20,66700.00,SGD
+4053,Lukas,Nair,lukas.nair4@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,4,2019-01-27,110100.00,SGD
+4062,Mei,Nguyen,mei.nguyen4@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,2,2013-02-12,52700.00,SGD
+4087,Beatriz,Evans,beatriz.evans5@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2013-08-15,71600.00,SGD
+4106,Hannah,Tan,hannah.tan4@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2012-05-12,74400.00,SGD
+4133,Gabriel,Santos,gabriel.santos3@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2026-04-04,87300.00,SGD
+4149,Isabella,Pereira,isabella.pereira2@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,2,2013-08-25,59200.00,SGD
+4157,Noah,Pereira,noah.pereira7@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2018-10-07,50400.00,SGD
+4171,Isabella,Wong,isabella.wong3@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2022-10-27,66600.00,SGD
+4184,Lucas,Silva,lucas.silva3@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2022-08-01,44900.00,SGD
+4207,Omar,Roy,omar.roy3@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2019-08-17,48100.00,SGD
+4243,Hannah,Iyer,hannah.iyer2@acme.example,SG,Singapore,3,Design,13,UX Researcher,3,2025-11-10,87700.00,SGD
+4253,Vikram,Davies,vikram.davies6@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2025-01-09,89000.00,SGD
+4287,Aarav,Singh,aarav.singh9@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,3,2012-07-05,68000.00,SGD
+4291,Rahul,Becker,rahul.becker3@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2024-03-26,78100.00,SGD
+4332,Priya,Lim,priya.lim4@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,3,2017-06-03,78700.00,SGD
+4353,Isabella,Souza,isabella.souza3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2022-03-21,95000.00,SGD
+4376,Olivia,Nguyen,olivia.nguyen@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2019-09-17,89700.00,SGD
+4380,Omar,Kim,omar.kim2@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,2,2013-08-03,74600.00,SGD
+4393,Mia,Costa,mia.costa4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2022-03-04,72300.00,SGD
+4396,Hui,Schmidt,hui.schmidt4@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2017-07-25,52300.00,SGD
+4413,Ananya,Costa,ananya.costa5@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2026-06-07,80600.00,SGD
+4450,Hui,Reddy,hui.reddy6@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2012-07-31,94700.00,SGD
+4465,Mia,Silva,mia.silva8@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,3,2015-10-18,112300.00,SGD
+4495,Lena,Costa,lena.costa5@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2016-04-30,117300.00,SGD
+4553,Daniel,Kim,daniel.kim4@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2021-09-06,85500.00,SGD
+4555,Fatima,Iyer,fatima.iyer4@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,3,2014-04-22,86700.00,SGD
+4560,Hui,Rao,hui.rao3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2018-11-05,75700.00,SGD
+4566,Emma,Pereira,emma.pereira2@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2022-03-26,99600.00,SGD
+4575,Felix,Nair,felix.nair5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2024-11-26,119600.00,SGD
+4582,Omar,Chen,omar.chen4@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,5,2021-03-15,154000.00,SGD
+4600,Sara,Oliveira,sara.oliveira7@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2019-12-02,128400.00,SGD
+4601,Olivia,Pereira,olivia.pereira2@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2017-11-21,73800.00,SGD
+4617,Daniel,Pereira,daniel.pereira5@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,4,2023-03-19,139500.00,SGD
+4619,Gabriel,Clarke,gabriel.clarke4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2015-08-10,94600.00,SGD
+4639,Meera,Kim,meera.kim@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2023-11-23,45000.00,SGD
+4671,James,Becker,james.becker3@acme.example,SG,Singapore,5,Sales,21,Account Executive,4,2016-09-19,125700.00,SGD
+4712,Olivia,Jones,olivia.jones3@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,4,2024-02-23,129800.00,SGD
+4763,Liam,Williams,liam.williams5@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2023-11-19,104500.00,SGD
+4801,Meera,Lim,meera.lim7@acme.example,SG,Singapore,7,Finance,34,Payroll Specialist,2,2013-05-09,53200.00,SGD
+4821,Oliver,Lee,oliver.lee6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2015-06-01,83700.00,SGD
+4833,James,Weber,james.weber4@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,3,2021-05-14,86500.00,SGD
+4838,Liam,Wong,liam.wong3@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2025-11-24,84600.00,SGD
+4851,Sophia,Brown,sophia.brown8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2026-05-12,85600.00,SGD
+4906,Emma,Chen,emma.chen3@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2018-11-12,87100.00,SGD
+4943,Arjun,Becker,arjun.becker7@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2023-11-03,95200.00,SGD
+4945,Ananya,Wong,ananya.wong3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2022-03-12,125000.00,SGD
+4952,Jonas,Tan,jonas.tan7@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,1,2025-08-14,67200.00,SGD
+4979,Lucas,Chen,lucas.chen2@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,1,2026-05-23,55500.00,SGD
+4994,Olivia,Oliveira,olivia.oliveira6@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,1,2013-08-30,56100.00,SGD
+5006,Isabella,Kim,isabella.kim3@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,1,2025-06-27,95300.00,SGD
+5050,Fatima,Schmidt,fatima.schmidt3@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2017-07-02,94800.00,SGD
+5071,Isabella,Weber,isabella.weber@acme.example,SG,Singapore,3,Design,15,Content Designer,1,2016-03-14,62800.00,SGD
+5095,Priya,Singh,priya.singh5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2014-01-27,120700.00,SGD
+5126,Jonas,Williams,jonas.williams6@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,3,2022-10-01,82800.00,SGD
+5156,Camila,Lim,camila.lim2@acme.example,SG,Singapore,2,Product,8,Business Analyst,2,2023-11-11,62600.00,SGD
+5160,Arjun,Kim,arjun.kim3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2022-11-03,87800.00,SGD
+5174,Noah,Lim,noah.lim3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2020-11-12,99700.00,SGD
+5181,Wei,Tan,wei.tan6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2019-09-22,101300.00,SGD
+5191,Ethan,Johnson,ethan.johnson4@acme.example,SG,Singapore,3,Design,15,Content Designer,3,2017-03-16,86600.00,SGD
+5239,Ananya,Rao,ananya.rao4@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,3,2014-04-05,87200.00,SGD
+5258,Wei,Iyer,wei.iyer3@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,3,2014-03-08,65000.00,SGD
+5301,Kenji,Patel,kenji.patel5@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2013-04-13,120700.00,SGD
+5309,Felix,Evans,felix.evans7@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,4,2023-07-26,102500.00,SGD
+5314,Daniel,Wong,daniel.wong4@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2026-03-28,43300.00,SGD
+5334,Charlotte,Ng,charlotte.ng4@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,3,2013-11-22,117100.00,SGD
+5345,Felix,Patel,felix.patel5@acme.example,SG,Singapore,8,Human Resources,38,Compensation Analyst,2,2026-04-03,64300.00,SGD
+5351,Hannah,Pereira,hannah.pereira4@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2022-01-30,92800.00,SGD
+5383,Rahul,Fischer,rahul.fischer7@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,4,2025-03-18,84900.00,SGD
+5386,Camila,Schmidt,camila.schmidt5@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,5,2025-06-04,116000.00,SGD
+5423,Kenji,Wagner,kenji.wagner5@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2019-04-09,78500.00,SGD
+5437,Felix,Davies,felix.davies8@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,4,2023-07-28,96300.00,SGD
+5462,Emma,Gupta,emma.gupta6@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2022-12-04,76900.00,SGD
+5466,Sophia,Patel,sophia.patel6@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,6,2018-08-07,158500.00,SGD
+5469,Mei,Johnson,mei.johnson5@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,1,2014-07-05,67100.00,SGD
+5476,Aarav,Mueller,aarav.mueller5@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,2,2013-07-14,102400.00,SGD
+5479,Chloe,Tan,chloe.tan5@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,2,2025-09-16,79400.00,SGD
+5482,Lena,Martin,lena.martin8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,5,2023-05-06,132700.00,SGD
+5526,Emma,Clarke,emma.clarke7@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2023-04-02,101300.00,SGD
+5528,Gabriel,Patel,gabriel.patel2@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2014-05-27,89000.00,SGD
+5545,Priyanka,Schmidt,priyanka.schmidt3@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,1,2017-03-13,82100.00,SGD
+5559,Hannah,Evans,hannah.evans6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2012-10-23,105400.00,SGD
+5586,Jun,Lim,jun.lim6@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2016-04-16,52500.00,SGD
+5614,Lucas,Pereira,lucas.pereira3@acme.example,SG,Singapore,7,Finance,31,Accountant,2,2012-11-24,64500.00,SGD
+5619,Vikram,Mueller,vikram.mueller6@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2020-12-24,106700.00,SGD
+5665,Lukas,Tan,lukas.tan4@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,2,2022-11-27,61600.00,SGD
+5687,Omar,Weber,omar.weber8@acme.example,SG,Singapore,3,Design,12,UI Designer,2,2012-07-13,72200.00,SGD
+5704,Hui,Williams,hui.williams@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2025-06-20,96700.00,SGD
+5710,Sara,Evans,sara.evans6@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,4,2017-07-31,131200.00,SGD
+5714,Priya,Clarke,priya.clarke4@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2019-01-04,87200.00,SGD
+5723,Oliver,Williams,oliver.williams4@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2024-05-08,47800.00,SGD
+5766,Daniel,Wilson,daniel.wilson8@acme.example,SG,Singapore,2,Product,6,Product Manager,5,2021-11-26,133700.00,SGD
+5810,Chloe,Tan,chloe.tan6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2026-04-11,85400.00,SGD
+5815,Mei,Williams,mei.williams5@acme.example,SG,Singapore,2,Product,8,Business Analyst,1,2026-05-14,61700.00,SGD
+5821,Hannah,Roy,hannah.roy3@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,3,2026-04-19,74300.00,SGD
+5840,Hui,Martin,hui.martin5@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2026-04-22,87600.00,SGD
+5868,Camila,Lee,camila.lee3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2022-06-08,132600.00,SGD
+5869,Sneha,Davies,sneha.davies3@acme.example,SG,Singapore,2,Product,8,Business Analyst,4,2021-11-21,78200.00,SGD
+5877,Camila,Chen,camila.chen3@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2023-10-03,78600.00,SGD
+5902,Isabella,Jones,isabella.jones3@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2017-01-27,104300.00,SGD
+5903,Sara,Wilson,sara.wilson6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2019-11-20,87800.00,SGD
+5905,Daniel,Weber,daniel.weber6@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,3,2015-06-27,99300.00,SGD
+5916,Sneha,Ng,sneha.ng6@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,1,2022-04-07,58800.00,SGD
+5923,Sneha,Pereira,sneha.pereira3@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2025-03-25,108900.00,SGD
+5962,Charlotte,Lim,charlotte.lim3@acme.example,SG,Singapore,3,Design,13,UX Researcher,3,2017-03-28,85700.00,SGD
+5970,Rahul,Tan,rahul.tan6@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2020-10-03,96300.00,SGD
+6020,Wei,Clarke,wei.clarke3@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,4,2013-06-20,102100.00,SGD
+6044,Emma,Roy,emma.roy7@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2020-07-24,75900.00,SGD
+6045,Vikram,Nair,vikram.nair2@acme.example,SG,Singapore,3,Design,13,UX Researcher,2,2024-01-29,85000.00,SGD
+6062,Noah,Roy,noah.roy6@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2012-12-19,84900.00,SGD
+6089,Sophia,Reddy,sophia.reddy@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2018-11-10,117400.00,SGD
+6094,Sneha,Davies,sneha.davies4@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2012-01-18,88500.00,SGD
+6107,Olivia,Wagner,olivia.wagner5@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,2,2021-02-22,107400.00,SGD
+6109,Omar,Souza,omar.souza5@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,2,2025-09-27,52800.00,SGD
+6115,Noah,Kim,noah.kim3@acme.example,SG,Singapore,3,Design,13,UX Researcher,3,2012-12-30,97300.00,SGD
+6118,Priya,Jones,priya.jones5@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2018-06-25,79500.00,SGD
+6129,Aarav,Sharma,aarav.sharma6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2021-04-24,118000.00,SGD
+6133,Ethan,Evans,ethan.evans5@acme.example,SG,Singapore,6,Marketing,29,Brand Manager,3,2018-12-28,86900.00,SGD
+6148,Liam,Becker,liam.becker8@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2012-04-22,101600.00,SGD
+6184,Aarav,Wilson,aarav.wilson7@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,4,2024-12-10,81500.00,SGD
+6206,Jun,Roy,jun.roy2@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,4,2025-06-27,131300.00,SGD
+6221,Camila,Schmidt,camila.schmidt6@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2023-01-31,90200.00,SGD
+6265,Priyanka,Fischer,priyanka.fischer4@acme.example,SG,Singapore,8,Human Resources,38,Compensation Analyst,3,2015-10-18,80200.00,SGD
+6280,Fatima,Johnson,fatima.johnson7@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2014-04-06,108800.00,SGD
+6283,Priya,Wong,priya.wong8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2016-08-19,115900.00,SGD
+6284,Mateus,Sharma,mateus.sharma3@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,1,2022-10-01,51200.00,SGD
+6294,Olivia,Wagner,olivia.wagner6@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,4,2026-04-29,129800.00,SGD
+6315,Arjun,Clarke,arjun.clarke4@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2018-10-14,87800.00,SGD
+6322,Mei,Chen,mei.chen5@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2021-05-29,47000.00,SGD
+6401,Camila,Patel,camila.patel4@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2020-05-13,101400.00,SGD
+6410,Gabriel,Reddy,gabriel.reddy5@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,1,2016-08-02,55400.00,SGD
+6424,Fatima,Evans,fatima.evans3@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2020-04-21,89900.00,SGD
+6425,Ethan,Lee,ethan.lee2@acme.example,SG,Singapore,6,Marketing,27,Content Marketer,1,2017-12-28,45000.00,SGD
+6436,Lucas,Pereira,lucas.pereira4@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,3,2013-03-22,74300.00,SGD
+6441,Beatriz,Rao,beatriz.rao5@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2012-07-22,63000.00,SGD
+6453,Isabella,Sharma,isabella.sharma5@acme.example,SG,Singapore,3,Design,11,UX Designer,4,2013-03-06,102400.00,SGD
+6459,Beatriz,Martin,beatriz.martin5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2017-10-23,107700.00,SGD
+6505,Priya,Clarke,priya.clarke6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2017-01-15,79100.00,SGD
+6513,Liam,Patel,liam.patel6@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2025-06-04,94300.00,SGD
+6517,Lena,Roy,lena.roy5@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,2,2025-05-29,53500.00,SGD
+6532,Aarav,Fischer,aarav.fischer4@acme.example,SG,Singapore,3,Design,12,UI Designer,3,2018-08-18,75800.00,SGD
+6567,Chloe,Williams,chloe.williams6@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2019-09-22,75000.00,SGD
+6593,Wei,Reddy,wei.reddy5@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2025-05-16,115800.00,SGD
+6611,Olivia,Mueller,olivia.mueller5@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,4,2017-03-17,130200.00,SGD
+6618,Gabriel,Smith,gabriel.smith9@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,4,2012-07-31,68200.00,SGD
+6639,Chloe,Evans,chloe.evans4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2017-10-24,78600.00,SGD
+6668,Lukas,Wilson,lukas.wilson5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2012-09-09,106200.00,SGD
+6704,Charlotte,Oliveira,charlotte.oliveira5@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2014-06-06,96700.00,SGD
+6777,Meera,Lee,meera.lee5@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,2,2026-04-12,109800.00,SGD
+6778,Olivia,Iyer,olivia.iyer7@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2017-11-19,130000.00,SGD
+6787,Arjun,Santos,arjun.santos3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2025-10-18,104400.00,SGD
+6795,Daniel,Silva,daniel.silva@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2014-10-19,84500.00,SGD
+6822,Oliver,Sharma,oliver.sharma8@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2025-07-02,72700.00,SGD
+6829,Kenji,Brown,kenji.brown5@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,3,2016-02-09,102900.00,SGD
+6836,Isabella,Sharma,isabella.sharma7@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,4,2020-08-14,95800.00,SGD
+6837,Charlotte,Clarke,charlotte.clarke9@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,3,2019-12-22,70500.00,SGD
+6849,Lucas,Sharma,lucas.sharma10@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,5,2017-05-15,94900.00,SGD
+6871,Oliver,Roy,oliver.roy10@acme.example,SG,Singapore,3,Design,12,UI Designer,3,2016-09-21,78100.00,SGD
+6889,Noah,Johnson,noah.johnson7@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2013-01-25,89500.00,SGD
+6909,Sneha,Rao,sneha.rao8@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,3,2013-07-29,65200.00,SGD
+6918,Arjun,Mueller,arjun.mueller7@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2014-11-27,121000.00,SGD
+6925,Lena,Fischer,lena.fischer7@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,5,2022-10-23,123800.00,SGD
+6935,Lucas,Gupta,lucas.gupta7@acme.example,SG,Singapore,5,Sales,21,Account Executive,4,2020-01-17,116100.00,SGD
+6950,Beatriz,Patel,beatriz.patel7@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2013-03-28,179500.00,SGD
+6966,Priyanka,Lee,priyanka.lee@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,5,2018-10-03,94100.00,SGD
+7009,Vikram,Wagner,vikram.wagner6@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,3,2015-03-19,115200.00,SGD
+7011,James,Wilson,james.wilson4@acme.example,SG,Singapore,3,Design,12,UI Designer,4,2018-08-29,100600.00,SGD
+7020,Meera,Becker,meera.becker5@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,4,2022-10-19,165200.00,SGD
+7039,Priya,Brown,priya.brown6@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2013-01-17,78000.00,SGD
+7042,Beatriz,Singh,beatriz.singh9@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2024-11-01,104300.00,SGD
+7046,Emma,Ng,emma.ng9@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2024-08-12,142700.00,SGD
+7048,Fatima,Clarke,fatima.clarke2@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2024-06-17,103000.00,SGD
+7073,Arjun,Reddy,arjun.reddy6@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,2,2018-06-20,95800.00,SGD
+7081,Priyanka,Williams,priyanka.williams5@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2018-07-20,135800.00,SGD
+7086,Lucas,Becker,lucas.becker6@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2020-10-13,63300.00,SGD
+7115,Vikram,Ng,vikram.ng4@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,3,2022-09-19,73900.00,SGD
+7128,Omar,Gupta,omar.gupta9@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,5,2014-04-23,156600.00,SGD
+7158,Liam,Ng,liam.ng2@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,1,2020-04-12,57000.00,SGD
+7168,Gabriel,Smith,gabriel.smith11@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,1,2015-06-03,142100.00,SGD
+7220,Camila,Evans,camila.evans7@acme.example,SG,Singapore,3,Design,15,Content Designer,2,2013-07-12,65400.00,SGD
+7229,Liam,Lim,liam.lim6@acme.example,SG,Singapore,2,Product,8,Business Analyst,2,2020-08-18,76300.00,SGD
+7233,Noah,Reddy,noah.reddy7@acme.example,SG,Singapore,3,Design,11,UX Designer,1,2015-09-12,61000.00,SGD
+7242,Chloe,Sharma,chloe.sharma4@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2024-10-06,69100.00,SGD
+7249,Daniel,Iyer,daniel.iyer9@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,2,2016-06-11,58700.00,SGD
+7269,Vikram,Silva,vikram.silva7@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,5,2023-03-09,163300.00,SGD
+7285,Meera,Evans,meera.evans5@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,3,2021-07-14,76900.00,SGD
+7314,Mei,Oliveira,mei.oliveira6@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2018-03-19,102100.00,SGD
+7330,Emma,Tan,emma.tan4@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,4,2020-06-12,74700.00,SGD
+7334,Liam,Lee,liam.lee5@acme.example,SG,Singapore,7,Finance,34,Payroll Specialist,3,2014-02-14,63700.00,SGD
+7340,Hui,Smith,hui.smith9@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,4,2024-01-12,131600.00,SGD
+7342,Priyanka,Roy,priyanka.roy6@acme.example,SG,Singapore,3,Design,15,Content Designer,1,2012-01-12,56900.00,SGD
+7355,Chloe,Johnson,chloe.johnson4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,5,2020-03-14,156700.00,SGD
+7374,Priya,Sharma,priya.sharma6@acme.example,SG,Singapore,8,Human Resources,40,HR Coordinator,2,2024-06-01,40100.00,SGD
+7377,Mateus,Wagner,mateus.wagner8@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2019-10-26,94000.00,SGD
+7381,Lucas,Singh,lucas.singh6@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2013-02-03,119200.00,SGD
+7410,Meera,Schmidt,meera.schmidt3@acme.example,SG,Singapore,7,Finance,31,Accountant,3,2022-01-13,66500.00,SGD
+7431,Sneha,Brown,sneha.brown12@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2012-11-02,40100.00,SGD
+7444,Mateus,Wagner,mateus.wagner9@acme.example,SG,Singapore,7,Finance,33,Controller,5,2017-07-25,119800.00,SGD
+7475,Mei,Clarke,mei.clarke3@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2014-08-30,135900.00,SGD
+7476,Chloe,Johnson,chloe.johnson5@acme.example,SG,Singapore,3,Design,12,UI Designer,2,2024-04-01,76700.00,SGD
+7513,Sophia,Iyer,sophia.iyer@acme.example,SG,Singapore,3,Design,12,UI Designer,3,2014-01-30,41400.00,SGD
+7561,Liam,Patel,liam.patel7@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,4,2014-10-23,94700.00,SGD
+7576,Beatriz,Davies,beatriz.davies3@acme.example,SG,Singapore,2,Product,6,Product Manager,3,2015-11-29,92800.00,SGD
+7616,Vikram,Johnson,vikram.johnson2@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2020-09-10,120400.00,SGD
+7649,Lena,Costa,lena.costa6@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2023-11-20,62200.00,SGD
+7654,Ethan,Ng,ethan.ng7@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2023-12-28,66200.00,SGD
+7699,Hannah,Ng,hannah.ng7@acme.example,SG,Singapore,6,Marketing,29,Brand Manager,4,2017-11-06,96800.00,SGD
+7700,Emma,Silva,emma.silva10@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2023-12-29,121400.00,SGD
+7705,Priya,Chen,priya.chen6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2023-07-15,115900.00,SGD
+7713,Mia,Lim,mia.lim6@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2022-10-09,53900.00,SGD
+7715,Sophia,Weber,sophia.weber3@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2021-09-12,151300.00,SGD
+7716,Jonas,Souza,jonas.souza8@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,1,2020-07-02,91100.00,SGD
+7741,Mei,Kim,mei.kim4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2018-12-21,112300.00,SGD
+7742,Camila,Mueller,camila.mueller4@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2016-09-18,103700.00,SGD
+7749,Felix,Patel,felix.patel6@acme.example,SG,Singapore,8,Human Resources,36,Recruiter,2,2020-08-04,61100.00,SGD
+7762,Emma,Iyer,emma.iyer5@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,2,2024-05-13,77500.00,SGD
+7772,Lena,Ng,lena.ng7@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,6,2012-07-15,190600.00,SGD
+7775,Mia,Brown,mia.brown6@acme.example,SG,Singapore,2,Product,6,Product Manager,2,2012-05-21,87300.00,SGD
+7777,Lucas,Nguyen,lucas.nguyen7@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,4,2023-12-08,121000.00,SGD
+7778,Mei,Lee,mei.lee9@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2014-11-30,106700.00,SGD
+7780,Meera,Patel,meera.patel9@acme.example,SG,Singapore,3,Design,15,Content Designer,3,2013-12-16,73400.00,SGD
+7792,Sophia,Roy,sophia.roy5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2016-06-08,116100.00,SGD
+7821,Arjun,Ng,arjun.ng8@acme.example,SG,Singapore,6,Marketing,28,SEO Specialist,3,2021-06-29,63800.00,SGD
+7822,Arjun,Taylor,arjun.taylor5@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2024-10-26,48800.00,SGD
+7826,Chloe,Santos,chloe.santos10@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,3,2012-11-23,78800.00,SGD
+7859,Camila,Nair,camila.nair10@acme.example,SG,Singapore,4,Data & Analytics,20,ML Engineer,3,2013-11-25,109100.00,SGD
+7865,Arjun,Silva,arjun.silva4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2024-02-29,106500.00,SGD
+7886,Meera,Davies,meera.davies6@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,4,2014-09-20,133400.00,SGD
+7904,Camila,Gupta,camila.gupta3@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2015-03-26,66700.00,SGD
+7916,Felix,Rao,felix.rao6@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,4,2025-06-27,106700.00,SGD
+7934,Isabella,Reddy,isabella.reddy9@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2022-12-03,79100.00,SGD
+7981,Camila,Lee,camila.lee4@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2017-01-09,88400.00,SGD
+7982,Rahul,Taylor,rahul.taylor8@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,4,2012-02-26,142400.00,SGD
+7986,Charlotte,Clarke,charlotte.clarke11@acme.example,SG,Singapore,5,Sales,23,Sales Manager,6,2016-12-15,138900.00,SGD
+7997,Sneha,Singh,sneha.singh9@acme.example,SG,Singapore,7,Finance,31,Accountant,2,2016-02-04,66200.00,SGD
+8015,Isabella,Tan,isabella.tan6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2020-12-15,112700.00,SGD
+8019,Lukas,Costa,lukas.costa11@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2018-06-13,46400.00,SGD
+8020,Olivia,Santos,olivia.santos12@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2015-09-19,107400.00,SGD
+8051,Sara,Evans,sara.evans8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2016-05-10,97600.00,SGD
+8088,Felix,Jones,felix.jones3@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2022-12-23,104000.00,SGD
+8124,Priyanka,Singh,priyanka.singh7@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,1,2019-07-13,55200.00,SGD
+8129,Fatima,Pereira,fatima.pereira8@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,3,2024-08-03,125200.00,SGD
+8159,Arjun,Martin,arjun.martin7@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,3,2013-07-27,83700.00,SGD
+8168,Felix,Santos,felix.santos8@acme.example,SG,Singapore,3,Design,12,UI Designer,4,2023-10-19,86400.00,SGD
+8173,Jun,Oliveira,jun.oliveira7@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2015-10-15,50000.00,SGD
+8187,James,Tan,james.tan6@acme.example,SG,Singapore,2,Product,10,Director of Product,5,2023-03-23,173700.00,SGD
+8195,Meera,Sharma,meera.sharma12@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2014-10-15,110400.00,SGD
+8225,Fatima,Evans,fatima.evans5@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,2,2021-10-05,79400.00,SGD
+8234,Aarav,Becker,aarav.becker5@acme.example,SG,Singapore,7,Finance,31,Accountant,1,2022-06-12,46800.00,SGD
+8241,Priya,Rao,priya.rao7@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,5,2021-04-06,148300.00,SGD
+8264,Liam,Gupta,liam.gupta6@acme.example,SG,Singapore,6,Marketing,26,Marketing Manager,4,2026-04-18,109900.00,SGD
+8287,Mateus,Kim,mateus.kim7@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2017-07-12,106500.00,SGD
+8307,Priyanka,Costa,priyanka.costa8@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,4,2012-07-05,123000.00,SGD
+8336,Charlotte,Pereira,charlotte.pereira5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2014-02-26,113800.00,SGD
+8364,Felix,Ng,felix.ng5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,4,2025-03-18,112800.00,SGD
+8382,Oliver,Gupta,oliver.gupta3@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2021-02-04,41300.00,SGD
+8390,Isabella,Nguyen,isabella.nguyen3@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,5,2018-12-04,147400.00,SGD
+8406,Hannah,Patel,hannah.patel5@acme.example,SG,Singapore,8,Human Resources,37,HR Business Partner,3,2023-12-20,72400.00,SGD
+8407,Fatima,Weber,fatima.weber6@acme.example,SG,Singapore,3,Design,13,UX Researcher,5,2019-07-11,118800.00,SGD
+8461,Oliver,Weber,oliver.weber5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2025-09-16,88000.00,SGD
+8505,Emma,Jones,emma.jones6@acme.example,SG,Singapore,8,Human Resources,40,HR Coordinator,1,2025-01-14,38200.00,SGD
+8538,Priyanka,Pereira,priyanka.pereira7@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,3,2014-03-28,78300.00,SGD
+8575,Wei,Costa,wei.costa6@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,5,2022-11-01,111600.00,SGD
+8603,Isabella,Silva,isabella.silva12@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2024-12-10,81400.00,SGD
+8614,Sophia,Reddy,sophia.reddy4@acme.example,SG,Singapore,5,Sales,23,Sales Manager,4,2015-06-06,123400.00,SGD
+8622,Lena,Chen,lena.chen4@acme.example,SG,Singapore,3,Design,13,UX Researcher,1,2017-04-30,71700.00,SGD
+8654,Arjun,Santos,arjun.santos4@acme.example,SG,Singapore,3,Design,11,UX Designer,2,2016-01-12,82100.00,SGD
+8660,Camila,Taylor,camila.taylor12@acme.example,SG,Singapore,3,Design,13,UX Researcher,3,2020-12-25,78800.00,SGD
+8661,Priyanka,Wagner,priyanka.wagner7@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2016-01-03,105400.00,SGD
+8689,Wei,Reddy,wei.reddy12@acme.example,SG,Singapore,2,Product,8,Business Analyst,3,2016-06-15,85700.00,SGD
+8702,Olivia,Lim,olivia.lim5@acme.example,SG,Singapore,5,Sales,21,Account Executive,2,2023-10-20,92300.00,SGD
+8827,Wei,Nair,wei.nair6@acme.example,SG,Singapore,4,Data & Analytics,17,Data Scientist,3,2014-03-21,124700.00,SGD
+8841,Fatima,Sharma,fatima.sharma6@acme.example,SG,Singapore,3,Design,11,UX Designer,3,2012-08-06,84900.00,SGD
+8852,Oliver,Chen,oliver.chen5@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2013-09-26,35300.00,SGD
+8866,Aarav,Martin,aarav.martin12@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,3,2022-11-24,93200.00,SGD
+8872,Lucas,Davies,lucas.davies4@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2014-08-05,103400.00,SGD
+8874,Charlotte,Fischer,charlotte.fischer6@acme.example,SG,Singapore,7,Finance,33,Controller,5,2020-03-08,131700.00,SGD
+8881,Priya,Williams,priya.williams6@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2017-03-04,70300.00,SGD
+8906,Lukas,Rao,lukas.rao8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2015-02-05,101900.00,SGD
+8942,Fatima,Nguyen,fatima.nguyen7@acme.example,SG,Singapore,4,Data & Analytics,19,BI Developer,1,2015-01-14,62000.00,SGD
+8988,Camila,Tan,camila.tan6@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,3,2013-09-13,118500.00,SGD
+9020,Sophia,Martin,sophia.martin8@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2017-08-28,116300.00,SGD
+9025,Wei,Clarke,wei.clarke6@acme.example,SG,Singapore,2,Product,8,Business Analyst,2,2025-08-17,68800.00,SGD
+9029,Beatriz,Oliveira,beatriz.oliveira5@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2013-09-07,108100.00,SGD
+9039,Vikram,Singh,vikram.singh4@acme.example,SG,Singapore,3,Design,11,UX Designer,4,2015-08-17,96700.00,SGD
+9050,Mateus,Nguyen,mateus.nguyen2@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,4,2024-01-24,128500.00,SGD
+9060,Sophia,Williams,sophia.williams5@acme.example,SG,Singapore,5,Sales,24,Solutions Consultant,2,2016-07-29,89100.00,SGD
+9072,Isabella,Wagner,isabella.wagner10@acme.example,SG,Singapore,7,Finance,34,Payroll Specialist,2,2020-08-07,56100.00,SGD
+9088,Rahul,Schmidt,rahul.schmidt5@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,3,2021-08-21,117000.00,SGD
+9097,James,Iyer,james.iyer6@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2013-02-22,109000.00,SGD
+9105,Kenji,Nair,kenji.nair9@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,1,2022-10-04,86500.00,SGD
+9194,Lena,Nair,lena.nair5@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,2,2021-11-02,87500.00,SGD
+9199,Arjun,Fischer,arjun.fischer8@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2022-12-09,95800.00,SGD
+9235,Olivia,Ng,olivia.ng8@acme.example,SG,Singapore,1,Engineering,1,Software Engineer,3,2024-04-03,110400.00,SGD
+9241,Priya,Lim,priya.lim10@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2017-03-27,48900.00,SGD
+9314,Omar,Silva,omar.silva8@acme.example,SG,Singapore,5,Sales,25,Customer Success Manager,3,2019-10-01,96500.00,SGD
+9321,Daniel,Costa,daniel.costa11@acme.example,SG,Singapore,3,Design,15,Content Designer,2,2021-02-28,67900.00,SGD
+9346,Rahul,Davies,rahul.davies8@acme.example,SG,Singapore,5,Sales,21,Account Executive,5,2016-01-10,127000.00,SGD
+9366,Emma,Santos,emma.santos6@acme.example,SG,Singapore,2,Product,7,Technical Program Manager,2,2019-03-27,87300.00,SGD
+9385,James,Gupta,james.gupta9@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,2,2025-05-16,77000.00,SGD
+9398,James,Jones,james.jones8@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,5,2012-05-25,139600.00,SGD
+9404,Rahul,Lee,rahul.lee5@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,3,2018-12-13,75200.00,SGD
+9457,Gabriel,Weber,gabriel.weber5@acme.example,SG,Singapore,7,Finance,31,Accountant,2,2015-05-13,61200.00,SGD
+9467,Isabella,Smith,isabella.smith5@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2018-07-14,111800.00,SGD
+9480,Hui,Wong,hui.wong5@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,3,2013-08-13,94300.00,SGD
+9484,Olivia,Mueller,olivia.mueller7@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,5,2024-04-07,161000.00,SGD
+9520,Mei,Schmidt,mei.schmidt3@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,2,2018-11-20,47400.00,SGD
+9539,Sophia,Brown,sophia.brown13@acme.example,SG,Singapore,1,Engineering,4,Engineering Manager,5,2013-06-24,149900.00,SGD
+9575,Noah,Gupta,noah.gupta7@acme.example,SG,Singapore,5,Sales,21,Account Executive,3,2025-10-26,106400.00,SGD
+9582,James,Wilson,james.wilson6@acme.example,SG,Singapore,3,Design,15,Content Designer,1,2019-06-19,61500.00,SGD
+9599,Mei,Brown,mei.brown4@acme.example,SG,Singapore,2,Product,6,Product Manager,4,2025-08-22,123400.00,SGD
+9621,Mateus,Nguyen,mateus.nguyen5@acme.example,SG,Singapore,6,Marketing,30,Growth Marketer,3,2022-08-06,89700.00,SGD
+9626,Arjun,Davies,arjun.davies8@acme.example,SG,Singapore,5,Sales,21,Account Executive,1,2022-08-13,79200.00,SGD
+9633,Rahul,Rao,rahul.rao4@acme.example,SG,Singapore,3,Design,12,UI Designer,3,2014-03-22,77900.00,SGD
+9643,Mei,Fischer,mei.fischer6@acme.example,SG,Singapore,5,Sales,22,Sales Development Representative,1,2024-05-04,43100.00,SGD
+9696,Lena,Roy,lena.roy9@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2021-03-24,59400.00,SGD
+9712,Fatima,Ng,fatima.ng7@acme.example,SG,Singapore,8,Human Resources,40,HR Coordinator,1,2025-08-18,37900.00,SGD
+9720,Charlotte,Taylor,charlotte.taylor3@acme.example,SG,Singapore,3,Design,15,Content Designer,1,2026-01-01,58500.00,SGD
+9726,Priyanka,Evans,priyanka.evans12@acme.example,SG,Singapore,1,Engineering,5,Security Engineer,2,2014-10-16,114500.00,SGD
+9727,Mei,Jones,mei.jones8@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2022-05-03,60300.00,SGD
+9728,Fatima,Evans,fatima.evans7@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2014-01-31,88300.00,SGD
+9745,Daniel,Fischer,daniel.fischer9@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,3,2023-03-17,83600.00,SGD
+9764,Felix,Taylor,felix.taylor8@acme.example,SG,Singapore,2,Product,9,Product Operations Specialist,2,2019-11-05,62100.00,SGD
+9780,Kenji,Tan,kenji.tan8@acme.example,SG,Singapore,7,Finance,35,Procurement Specialist,4,2023-11-03,77900.00,SGD
+9797,Lena,Clarke,lena.clarke7@acme.example,SG,Singapore,2,Product,6,Product Manager,5,2020-04-17,136600.00,SGD
+9816,Oliver,Lee,oliver.lee14@acme.example,SG,Singapore,3,Design,15,Content Designer,3,2015-11-14,82000.00,SGD
+9849,Rahul,Tan,rahul.tan10@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,3,2020-12-23,133900.00,SGD
+9859,Mei,Davies,mei.davies3@acme.example,SG,Singapore,2,Product,6,Product Manager,5,2016-10-22,106800.00,SGD
+9886,James,Oliveira,james.oliveira6@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,2,2024-11-06,85900.00,SGD
+9891,Priya,Oliveira,priya.oliveira10@acme.example,SG,Singapore,1,Engineering,2,QA Engineer,1,2018-06-03,61000.00,SGD
+9913,Isabella,Lim,isabella.lim8@acme.example,SG,Singapore,1,Engineering,3,DevOps Engineer,1,2016-12-12,86600.00,SGD
+9982,Jun,Weber,jun.weber7@acme.example,SG,Singapore,7,Finance,32,Financial Analyst,2,2026-02-27,79900.00,SGD
+9988,Oliver,Davies,oliver.davies@acme.example,SG,Singapore,4,Data & Analytics,16,Data Analyst,2,2017-04-29,69800.00,SGD
+9990,Fatima,Schmidt,fatima.schmidt8@acme.example,SG,Singapore,4,Data & Analytics,18,Data Engineer,1,2026-07-02,85500.00,SGD
