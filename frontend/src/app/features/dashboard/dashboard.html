@@ -1,0 +1,206 @@
+<div class="dashboard-page">
+
+  <div class="page-header">
+    <div>
+      <h1>Dashboard</h1>
+      <p>Overview of employee salary information</p>
+    </div>
+  </div>
+
+  @if (loading) {
+    <div class="loading">
+      Loading dashboard...
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="error-message">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (!loading && !errorMessage && summary) {
+
+    <div class="summary-grid">
+
+      <div class="summary-card">
+
+        <div class="card-icon">
+          👥
+        </div>
+
+        <div class="card-content">
+          <span>Total Employees</span>
+          <strong>
+            {{ summary.headcount }}
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="summary-card">
+
+        <div class="card-icon">
+          💰
+        </div>
+
+        <div class="card-content">
+          <span>Total Payroll</span>
+          <strong>
+            ${{ summary.totalPayrollUsd | number:'1.2-2' }}
+          </strong>
+        </div>
+
+      </div>
+
+      <div class="summary-card">
+
+        <div class="card-icon">
+          📊
+        </div>
+
+        <div class="card-content">
+          <span>Median Salary</span>
+          <strong>
+            ${{ summary.medianSalaryUsd | number:'1.2-2' }}
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+    @if (distribution.length > 0) {
+
+  <div class="distribution-section">
+
+    <div class="section-header">
+      <h2>Salary Distribution</h2>
+      <p>Number of employees across salary ranges</p>
+    </div>
+
+    <div class="distribution-table">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Salary Range (USD)</th>
+            <th>Employees</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          @for (bucket of distribution; track bucket.rangeStart) {
+
+            <tr>
+
+              <td>
+                ${{ bucket.rangeStart | number:'1.0-0' }}
+                -
+                ${{ bucket.rangeEnd | number:'1.0-0' }}
+              </td>
+
+              <td>
+                <strong>{{ bucket.count }}</strong>
+              </td>
+
+            </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+  
+<div class="outliers-section">
+
+  <div class="section-header">
+    <h2>Salary Outliers</h2>
+    <p>Employees with salaries significantly different from their group median</p>
+  </div>
+
+  @if (outliers.length > 0) {
+
+    <div class="outliers-table">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Country</th>
+            <th>Job Title</th>
+            <th>Salary</th>
+            <th>Group Median</th>
+            <th>Deviation</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          @for (outlier of outliers; track outlier.employeeId) {
+
+            <tr>
+
+              <td>
+                <strong>
+                  {{ outlier.firstName }}
+                  {{ outlier.lastName }}
+                </strong>
+              </td>
+
+              <td>{{ outlier.countryCode }}</td>
+
+              <td>{{ outlier.jobTitleTitle }}</td>
+
+              <td>
+                {{ outlier.salary | number:'1.0-0' }}
+                {{ outlier.currencyCode }}
+              </td>
+
+              <td>
+                {{ outlier.groupMedian | number:'1.0-0' }}
+                {{ outlier.currencyCode }}
+              </td>
+
+              <td>
+                {{ outlier.deviationPct | number:'1.1-1' }}%
+              </td>
+
+            </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  } @else {
+
+    <div class="no-outliers">
+      <div class="no-outliers-icon">✓</div>
+
+      <strong>No salary outliers found</strong>
+
+      <p>
+        No employees currently have a significant salary deviation
+        from their group median.
+      </p>
+    </div>
+
+  }
+
+</div>
+}
+
+
+  }
+
+</div>
