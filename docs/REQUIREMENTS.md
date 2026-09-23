@@ -1,61 +1,199 @@
-# ACME Salary Management: Requirements (v1)
+# Salary Management — Requirements
 
-## Goal
-Replace the Excel workflow for ~10,000 employees across multiple countries with a web app that lets the HR Manager (a) maintain salary records reliably and (b) answer "how do we pay people?" in seconds, without building pivot tables.
+## 1. Goal
 
-**Success test:** the HR Manager can answer each of these in under 30 seconds:
-- What is the median salary of Software Engineers in Germany?
-- Which departments have the widest pay spread?
-- Who is paid far above or below peers in the same role and country?
-- What is our total annual payroll, and how is it split by country?
+Build a web-based Employee Salary Management system for an organization with approximately 10,000 employees. The application enables an HR Manager to manage employee salary information and understand how the organization pays people through salary analytics and insights.
 
-## Persona
-One user: the HR Manager. Full read/write access to all salary data. Comfortable with Excel, not with SQL.
+The solution replaces spreadsheet-based salary management with a structured, searchable, validated, and maintainable application.
 
-## In scope
+## 2. User Persona
 
-**1. Employee directory (P0)**
-- Server-side pagination, search (name/email), filters (country, department, job title, level) and sorting. It must stay fast at 10k rows.
-- Create, edit and delete an employee, with validation (required fields, positive salary, valid country and currency, unique email).
+**Primary User:** HR Manager
 
-**2. Salary changes with history (P0)**
-- Every salary change is recorded (old, new, effective date, reason) and visible on the employee's page. HR routinely needs "what was it before, and when did it change?"
+The HR Manager should be able to:
 
-**3. Pay insights dashboard (P0)**
-- Headline: headcount, total payroll, median salary.
-- By country, department and job title: headcount, min, median, mean, p90, max.
-- Salary distribution histogram (filterable).
-- Outlier list: employees more than ±X% from the median of the same job title and country.
+* View and manage employee information.
+* Create, update, and delete employee records.
+* View salary information and salary history.
+* Search and filter employee records.
+* Understand salary distribution and organizational salary patterns.
+* Import and export salary data using CSV files.
+* Identify invalid or inconsistent salary data.
 
-**4. Multi-currency handling (P0)**
-- Salaries are stored in local currency, as the source of truth.
-- Cross-country aggregates are shown in USD using a small, versioned FX table with an "as of" date. Per-country views stay in local currency.
+## 3. Scope & Features
 
-**5. CSV export and import (P1)**
-- Export the current filtered view.
-- Import with row-level validation and an error report. This is the migration path off Excel.
+### Employee Management
 
-**6. Seed script (P0)**
-- Deterministic (fixed random seed) generation of 10,000 realistic employees across ~8 countries, ~8 departments and ~40 job titles, with country-adjusted salary ranges.
+* Display employee records in a paginated/list-based UI.
+* Add new employees.
+* Edit existing employees.
+* Delete employees.
+* Search and filter employees.
+* Validate employee and reference-data fields.
+* Maintain employee creation and update timestamps.
 
-## Deliberately left out (and why)
+### Salary Management
 
-| Left out | Reason |
-|---|---|
-| Authentication / RBAC / audit of *who* changed data | Single persona, synthetic demo data. **Real deployment with real salaries would need SSO and audit logging first**; this is the biggest production gap. |
-| Live FX rates | Adds an external dependency and non-deterministic numbers. A static, dated table is enough to answer the questions. |
-| Payroll, tax, benefits, bonus, equity | Different problem domain. Base annual salary is the question being asked. |
-| Demographics / pay-equity analysis (e.g. gender gap) | Valuable, but sensitive data with legal implications; it needs its own design. Listed as the natural v2. |
-| Org chart / managers, approval workflows, comp review cycles | Multi-user features with no second persona in v1. |
-| Terminated-employee history | Directory covers current employees only, to keep the data model small. |
-| i18n, notifications, mobile-specific UI | Not needed to answer the core questions. |
+* Store employee salary information.
+* Record salary changes.
+* Maintain salary history.
+* View salary information associated with employees.
+* Validate salary-related data.
 
-## Non-functional requirements
-- List and insight queries respond in < 500 ms at 10k rows (indexes on country, department, job title, salary; aggregates computed in the database).
-- Unit tests cover validation, salary-change history, FX conversion, and percentile/outlier logic. They are fast and deterministic: domain logic is tested without a database, and a small set of Testcontainers SQL Server integration tests covers the queries.
-- One-command setup: install, migrate, seed, run.
+### Dashboard & Insights
 
-## Key trade-offs
-- **Stack: Java (Spring Boot) + Angular + SQL Server:** as specified for the role. The data is tabular and the questions are aggregations, so a relational DB is the natural fit; 10k rows is small for SQL Server.
-- **Percentiles in SQL:** SQL Server offers `PERCENTILE_CONT` only as a window function, not an aggregate, so grouped medians need a specific query shape. It is isolated in one repository and covered by integration tests.
-- **Server-side pagination over client-side:** keeps the UI responsive and scales past 10k.
+Provide HR-focused salary analytics including:
+
+* Total employee count.
+* Total and average salary information.
+* Salary distribution.
+* Salary breakdown by relevant dimensions such as department.
+* Salary distribution histogram.
+* Salary insights that help HR understand organizational pay patterns.
+* Outlier analysis with a clear empty state when no outliers are detected.
+
+### CSV Import & Export
+
+* Export employee/salary data to CSV.
+* Import employee/salary data from CSV.
+* Validate imported rows.
+* Report row-level validation errors.
+* Allow valid records to be processed while clearly reporting invalid data.
+
+### Navigation & UI
+
+The application provides dedicated navigation for:
+
+* Employees
+* Dashboard
+* Insights
+* Salary
+* CSV
+
+The application uses a responsive layout with persistent navigation while employee content can scroll independently.
+
+## 4. Technical Requirements
+
+### Backend
+
+* Java
+* Spring Boot
+* Spring Data JPA / Hibernate
+* REST APIs
+* Relational database
+* Structured error responses using RFC 7807 Problem Details
+* Validation of request and reference data
+
+### Frontend
+
+* Angular
+* TypeScript
+* HTML/CSS
+* Responsive UI
+* REST API integration
+* Component-based architecture
+
+### Database
+
+The application uses a relational database to persist:
+
+* Employee information
+* Salary information
+* Salary history
+* Reference data
+
+## 5. Data & Seeding
+
+The assessment targets an organization with approximately **10,000 employees**.
+
+The system should support large employee datasets while maintaining acceptable usability and API performance.
+
+Seed/sample data should be deterministic and suitable for development, testing, and demonstration.
+
+## 6. Validation & Error Handling
+
+The application should:
+
+* Validate required fields.
+* Validate reference-data values.
+* Validate salary-related values.
+* Return meaningful API errors.
+* Use structured error responses.
+* Provide clear validation feedback for CSV imports.
+* Avoid silently accepting invalid data.
+
+## 7. Testing
+
+The solution should include meaningful automated tests covering core functionality.
+
+Tests should be:
+
+* Fast.
+* Deterministic.
+* Easy to understand.
+* Focused on important business logic and API behavior.
+
+## 8. Architecture & Maintainability
+
+The solution should follow a clear separation of responsibilities between:
+
+* Angular UI
+* REST API layer
+* Business/service layer
+* Data-access layer
+* Relational database
+
+Code should be readable, maintainable, and organized for future enhancements.
+
+## 9. Performance Considerations
+
+The application is designed with the target of approximately 10,000 employees in mind.
+
+Important considerations include:
+
+* Efficient database queries.
+* Pagination for employee records.
+* Appropriate filtering and searching.
+* Efficient API responses.
+* Avoiding unnecessary frontend rendering.
+* Page-wise/independent UI scrolling where appropriate.
+
+## 10. Deliberately Out of Scope
+
+To keep the assessment focused, the following are deliberately excluded unless required later:
+
+* Payroll processing and salary payment execution.
+* Tax calculation and statutory payroll compliance.
+* Employee attendance management.
+* Leave management.
+* Recruitment workflows.
+* Employee self-service functionality.
+* Complex role/permission administration beyond the HR Manager use case.
+* Advanced forecasting or machine-learning-based salary prediction.
+* Integration with external payroll providers.
+
+## 11. Development & Delivery Expectations
+
+The project should demonstrate:
+
+* Incremental development through meaningful Git commits.
+* Clean and maintainable code.
+* Automated tests for core functionality.
+* Clear engineering and product decisions.
+* Intentional use of AI tools during development.
+* Supporting artifacts such as requirements, design notes, architecture information, and trade-off decisions where useful.
+
+## 12. Success Criteria
+
+The solution is considered successful when an HR Manager can:
+
+1. Manage employee records through the web application.
+2. Manage and review employee salary information.
+3. View salary history and salary changes.
+4. Analyze salary distribution and organizational salary patterns.
+5. Import and export salary data using CSV.
+6. Receive clear validation and error feedback.
+7. Work with a dataset representing approximately 10,000 employees.
+8. Use the application through a responsive and maintainable UI.
+
+The primary objective is not to build the most complex system, but to demonstrate sound product thinking, clear architecture, good engineering practices, and a fully functional end-to-end solution.

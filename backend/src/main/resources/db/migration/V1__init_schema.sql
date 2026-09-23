@@ -1,4 +1,4 @@
--- V1: initial schema for ACME salary management (SQL Server)
+    -- V1: initial schema for ACME salary management (SQL Server)
 
 CREATE TABLE currency (
     code        CHAR(3)        NOT NULL,
