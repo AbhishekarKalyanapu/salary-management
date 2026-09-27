@@ -82,6 +82,16 @@ Principle: business rules live in plain Java classes (`SalaryPolicy`, `FxConvert
 - Indexes match the filter and grouping columns (see the migration). The `INCLUDE`d salary column makes the aggregation queries covering.
 - Target: directory and insight queries under 500 ms at 10k rows; verify with an integration test that asserts the seeded count and a timing sanity check.
 
+## Trade-offs
+
+- **Server-side pagination instead of loading all employees:** adds API/database requests but keeps the browser responsive and avoids transferring 10,000 records unnecessarily.
+- **SQL-based analytics instead of application-side calculations:** makes the database do aggregation and percentile work efficiently, while keeping analytics logic closer to the stored data.
+- **Fixed illustrative FX rates instead of live exchange rates:** keeps demos and tests deterministic and avoids an external dependency. A production system would use a controlled FX provider with an audit trail.
+- **Local-currency salary storage instead of a single normalized currency:** preserves the original salary context and avoids historical values changing when FX rates change.
+- **Optimistic concurrency with `ROWVERSION`:** prevents silent overwrites when two users edit the same employee, at the cost of requiring clients to handle concurrency conflicts.
+- **Reference data in Flyway migrations instead of runtime seed logic:** guarantees required countries, currencies, departments, and job titles exist whenever the schema is created, while employee data remains separately seedable.
+- **No authentication in this assessment:** reduces implementation complexity and keeps the focus on salary-management functionality. A production deployment would require SSO/RBAC and a proper audit trail.
+
 ## Testing strategy
 1. **Unit (no DB, no Spring):** validation rules, FX conversion and rounding, outlier detection, CSV row parsing and validation, salary-change rules.
 2. **Service tests (Mockito):** salary change writes history and updates the employee atomically; rejected changes write nothing.
