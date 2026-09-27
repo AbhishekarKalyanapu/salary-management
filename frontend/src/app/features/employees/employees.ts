@@ -44,9 +44,10 @@ export class Employees implements OnInit {
   departments: Department[] = [];
   jobTitles: JobTitle[] = [];
 
-  showAddForm = false;
-  saving = false;
-  formError = '';
+ showAddForm = false;
+editingEmployee: Employee | null = null;
+saving = false;
+formError = '';
 
   newEmployee = {
     firstName: '',
@@ -144,72 +145,152 @@ export class Employees implements OnInit {
   }
 
   createEmployee(): void {
-    this.saving = true;
-    this.formError = '';
+  this.saving = true;
+  this.formError = '';
 
-    if (
-      !this.newEmployee.firstName.trim() ||
-      !this.newEmployee.lastName.trim() ||
-      !this.newEmployee.email.trim() ||
-      !this.newEmployee.countryCode ||
-      this.newEmployee.departmentId === undefined ||
-      this.newEmployee.jobTitleId === undefined ||
-      !this.newEmployee.hireDate ||
-      !this.newEmployee.currencyCode ||
-      this.newEmployee.salary <= 0
-    ) {
-      this.formError = 'Please fill in all required fields.';
-      this.saving = false;
-      return;
-    }
+  if (
+    !this.newEmployee.firstName.trim() ||
+    !this.newEmployee.lastName.trim() ||
+    !this.newEmployee.email.trim() ||
+    !this.newEmployee.countryCode ||
+    this.newEmployee.departmentId === undefined ||
+    this.newEmployee.jobTitleId === undefined ||
+    !this.newEmployee.hireDate ||
+    !this.newEmployee.currencyCode ||
+    this.newEmployee.salary <= 0
+  ) {
+    this.formError = 'Please fill in all required fields.';
+    this.saving = false;
+    return;
+  }
 
-    const request: EmployeeCreateRequest = {
+  if (this.editingEmployee) {
+    const request = {
       firstName: this.newEmployee.firstName.trim(),
       lastName: this.newEmployee.lastName.trim(),
       email: this.newEmployee.email.trim(),
       countryCode: this.newEmployee.countryCode,
-      currencyCode: this.newEmployee.currencyCode,
       departmentId: this.newEmployee.departmentId,
       jobTitleId: this.newEmployee.jobTitleId,
       level: this.newEmployee.level,
-      hireDate: this.newEmployee.hireDate,
-      salary: this.newEmployee.salary
+      hireDate: this.newEmployee.hireDate
     };
 
-    this.employeeService.createEmployee(request).subscribe({
-      next: () => {
-        this.saving = false;
-        this.showAddForm = false;
+    this.employeeService
+      .updateEmployee(this.editingEmployee.id, request)
+      .subscribe({
+        next: () => {
+          this.saving = false;
+          this.showAddForm = false;
+          this.editingEmployee = null;
+          this.loadEmployees();
+        },
+        error: error => {
+          console.error('Failed to update employee:', error);
 
-        this.newEmployee = {
-          firstName: '',
-          lastName: '',
-          email: '',
-          countryCode: '',
-          currencyCode: '',
-          departmentId: undefined,
-          jobTitleId: undefined,
-          level: 1,
-          hireDate: '',
-          salary: 0
-        };
+          this.formError =
+            error?.error?.detail ||
+            error?.error?.message ||
+            'Unable to update employee.';
 
-        this.currentPage = 0;
-        this.loadEmployees();
-      },
+          this.saving = false;
+        }
+      });
 
-      error: error => {
-        console.error('Failed to create employee:', error);
-
-        this.formError =
-          error?.error?.detail ||
-          error?.error?.message ||
-          'Unable to create employee.';
-
-        this.saving = false;
-      }
-    });
+    return;
   }
+
+  const request: EmployeeCreateRequest = {
+    firstName: this.newEmployee.firstName.trim(),
+    lastName: this.newEmployee.lastName.trim(),
+    email: this.newEmployee.email.trim(),
+    countryCode: this.newEmployee.countryCode,
+    currencyCode: this.newEmployee.currencyCode,
+    departmentId: this.newEmployee.departmentId,
+    jobTitleId: this.newEmployee.jobTitleId,
+    level: this.newEmployee.level,
+    hireDate: this.newEmployee.hireDate,
+    salary: this.newEmployee.salary
+  };
+
+  this.employeeService.createEmployee(request).subscribe({
+    next: () => {
+      this.saving = false;
+      this.showAddForm = false;
+      this.editingEmployee = null;
+
+      this.newEmployee = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: '',
+        currencyCode: '',
+        departmentId: undefined,
+        jobTitleId: undefined,
+        level: 1,
+        hireDate: '',
+        salary: 0
+      };
+
+      this.currentPage = 0;
+      this.loadEmployees();
+    },
+
+    error: error => {
+      console.error('Failed to create employee:', error);
+
+      this.formError =
+        error?.error?.detail ||
+        error?.error?.message ||
+        'Unable to create employee.';
+
+      this.saving = false;
+    }
+  });
+}
+  editEmployee(employee: Employee): void {
+  this.editingEmployee = employee;
+
+  this.newEmployee = {
+    firstName: employee.firstName,
+    lastName: employee.lastName,
+    email: employee.email,
+    countryCode: employee.countryCode,
+    currencyCode: employee.currencyCode,
+    departmentId: employee.departmentId,
+    jobTitleId: employee.jobTitleId,
+    level: employee.level,
+    hireDate: employee.hireDate,
+    salary: employee.salary
+  };
+
+  this.formError = '';
+  this.showAddForm = true;
+}
+
+deleteEmployee(employee: Employee): void {
+  const confirmed = window.confirm(
+    `Are you sure you want to delete ${employee.firstName} ${employee.lastName}?`
+  );
+
+  if (!confirmed) {
+    return;
+  }
+
+  this.employeeService.deleteEmployee(employee.id).subscribe({
+    next: () => {
+      this.loadEmployees();
+    },
+    error: error => {
+      console.error('Failed to delete employee:', error);
+
+      this.errorMessage =
+        error?.error?.detail ||
+        error?.error?.message ||
+        'Unable to delete employee.';
+    }
+  });
+}
 
   get showingFrom(): number {
     return this.totalElements === 0

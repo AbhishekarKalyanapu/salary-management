@@ -77,61 +77,80 @@
 
       <table>
 
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Employee</th>
-            <th>Email</th>
-            <th>Country</th>
-            <th>Department</th>
-            <th>Job Title</th>
-            <th>Level</th>
-            <th>Salary</th>
-          </tr>
-        </thead>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Employee</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>Department</th>
+      <th>Job Title</th>
+      <th>Level</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
 
-        <tbody>
+  <tbody>
 
-          @for (employee of employees; track employee.id) {
-            <tr>
+    @for (employee of employees; track employee.id) {
+      <tr>
 
-              <td>{{ employee.id }}</td>
+        <td>{{ employee.id }}</td>
 
-              <td>
-                <strong>
-                  {{ employee.firstName }} {{ employee.lastName }}
-                </strong>
-              </td>
+        <td>
+          <strong>
+            {{ employee.firstName }} {{ employee.lastName }}
+          </strong>
+        </td>
 
-              <td>{{ employee.email }}</td>
+        <td>{{ employee.email }}</td>
 
-              <td>{{ employee.countryName }}</td>
+        <td>{{ employee.countryName }}</td>
 
-              <td>{{ employee.departmentName }}</td>
+        <td>{{ employee.departmentName }}</td>
 
-              <td>{{ employee.jobTitleTitle }}</td>
+        <td>{{ employee.jobTitleTitle }}</td>
 
-              <td>{{ employee.level }}</td>
+        <td>{{ employee.level }}</td>
 
-              <td>
-                {{ employee.salary | number:'1.2-2' }}
-                {{ employee.currencyCode }}
-              </td>
+        <td>
+          {{ employee.salary | number:'1.2-2' }}
+          {{ employee.currencyCode }}
+        </td>
 
-            </tr>
-          }
+        <td class="actions">
 
-          @empty {
-            <tr>
-              <td colspan="8" class="empty">
-                No employees found.
-              </td>
-            </tr>
-          }
+          <button
+            type="button"
+            class="edit-button"
+            (click)="editEmployee(employee)">
+            Edit
+          </button>
 
-        </tbody>
+          <button
+            type="button"
+            class="delete-button"
+            (click)="deleteEmployee(employee)">
+            Delete
+          </button>
 
-      </table>
+        </td>
+
+      </tr>
+    }
+
+    @empty {
+      <tr>
+        <td colspan="9" class="empty">
+          No employees found.
+        </td>
+      </tr>
+    }
+
+  </tbody>
+
+</table>
 
     </div>
 
@@ -177,16 +196,16 @@
     <div class="employee-form">
       <div class="form-header">
         <div>
-          <h2>Add Employee</h2>
-          <p>Create a new employee record</p>
+          <h2>{{ editingEmployee ? 'Edit Employee' : 'Add Employee' }}</h2>
+         <p>{{ editingEmployee ? 'Update employee information' : 'Create a new employee record' }}</p>
         </div>
 
-        <button
-          type="button"
-          class="close-button"
-          (click)="showAddForm = false">
-          ×
-        </button>
+       <button
+  type="button"
+  class="close-button"
+  (click)="showAddForm = false; editingEmployee = null">
+  ×
+</button>
       </div>
 
       <form (ngSubmit)="createEmployee()">
@@ -330,17 +349,20 @@
 
         <div class="form-actions">
           <button
-            type="button"
-            class="cancel-button"
-            (click)="showAddForm = false">
-            Cancel
-          </button>
+  type="button"
+  class="cancel-button"
+  (click)="showAddForm = false; editingEmployee = null">
+  Cancel
+</button>
 
           <button
             type="submit"
             class="save-button"
             [disabled]="saving">
-            {{ saving ? 'Creating...' : 'Create Employee' }}
+            {{ saving
+  ? (editingEmployee ? 'Updating...' : 'Creating...')
+  : (editingEmployee ? 'Update Employee' : 'Create Employee')
+}}
           </button>
         </div>
 
