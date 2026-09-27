@@ -1,6 +1,7 @@
 # Design Notes
 
 ## Stack
+
 | Layer | Choice | Why |
 |---|---|---|
 | Backend | Java 21, Spring Boot 3 (Web, Validation, Data JPA, JDBC) | Role-specified; mature ecosystem |
@@ -8,9 +9,30 @@
 | Frontend | Angular (standalone components), Angular Material, Chart.js | Role-specified; Material gives a table with server-side paginator and sorting |
 | Tests | JUnit 5, AssertJ, Mockito, Testcontainers (MSSQL) | Fast unit tests for logic; few real-DB tests for queries |
 
+## Architecture Diagram
+
+mermaid
+flowchart LR
+    UI[Angular Frontend] --> API[Spring Boot REST API]
+
+    API --> EMP[Employee Module]
+    API --> SAL[Salary Module]
+    API --> INS[Insights Module]
+    API --> CSV[CSV Import / Export]
+    API --> REF[Reference Data]
+
+    EMP --> DB[(SQL Server)]
+    SAL --> DB
+    INS --> DB
+    CSV --> DB
+    REF --> DB
+
+    SEED[Deterministic Seed Runner] --> DB
+    MIG[Flyway Database Migrations] --> DB
+
 ## Backend structure (package by feature)
-```
 com.acme.salary
+
   employee/   controller, service, repository, dto, validation
   salary/     salary-change service, history repository
   insights/   controller, service, InsightsRepository (native SQL)
@@ -18,7 +40,7 @@ com.acme.salary
   csv/        import/export
   common/     error handling (RFC 7807), paging
   seed/       SeedRunner (profile "seed")
-```
+
 Principle: business rules live in plain Java classes (`SalaryPolicy`, `FxConverter`, `OutlierDetector`, `EmployeeValidator`) with no Spring or DB dependency, so they are unit-testable in milliseconds.
 
 ## Data model decisions
