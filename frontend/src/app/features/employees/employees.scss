@@ -103,3 +103,286 @@ tbody tr:hover {
     flex-direction: column;
   }
 }
+/* Search & Filters */
+.filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 18px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.filter-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.filter-group input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-group input:focus {
+  border-color: #1976d2;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.search-button,
+.clear-button,
+.page-button {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-button {
+  border: none;
+  background: #1976d2;
+  color: white;
+}
+
+.search-button:hover:not(:disabled) {
+  background: #125ca1;
+}
+
+.clear-button,
+.page-button {
+  border: 1px solid #d5d5d5;
+  background: white;
+  color: #444;
+}
+
+.clear-button:hover:not(:disabled),
+.page-button:hover:not(:disabled) {
+  background: #f5f5f5;
+}
+
+.search-button:disabled,
+.clear-button:disabled,
+.page-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 4px;
+}
+
+.pagination-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-number {
+  font-size: 14px;
+  color: #555;
+  min-width: 110px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-actions {
+    width: 100%;
+  }
+
+  .search-button,
+  .clear-button {
+    flex: 1;
+  }
+
+  .pagination {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.employee-form {
+  width: min(760px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.form-header p {
+  margin: 6px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.close-button {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  color: #666;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.close-button:hover {
+  color: #222;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1976d2;
+}
+
+.form-error {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.cancel-button,
+.save-button {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  border: 1px solid #d5d5d5;
+  background: white;
+  color: #444;
+}
+
+.cancel-button:hover {
+  background: #f5f5f5;
+}
+
+.save-button {
+  border: none;
+  background: #1976d2;
+  color: white;
+}
+
+.save-button:hover:not(:disabled) {
+  background: #125ca1;
+}
+
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .form-overlay {
+    padding: 12px;
+  }
+
+  .employee-form {
+    max-height: 95vh;
+    padding: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

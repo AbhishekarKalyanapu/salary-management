@@ -1,1 +1,211 @@
-<p>insights works!</p>
+<div class="page">
+
+  <div class="page-header">
+    <div>
+      <h1>Salary Insights</h1>
+      <p>Detailed analysis of employee compensation across the organization.</p>
+    </div>
+
+    <button class="refresh-btn" (click)="loadInsights()" [disabled]="loading">
+      {{ loading ? 'Loading...' : 'Refresh' }}
+    </button>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    Loading salary insights...
+  </div>
+
+  <ng-container *ngIf="!loading">
+
+    <!-- Summary -->
+    <section class="section">
+      <h2>Overview</h2>
+
+      <div class="summary-grid">
+
+        <div class="stat-card">
+          <span class="stat-label">Employees</span>
+          <strong>{{ summary?.headcount | number }}</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Total Payroll (USD)</span>
+          <strong>${{ summary?.totalPayrollUsd | number:'1.0-0' }}</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Median Salary (USD)</span>
+          <strong>${{ summary?.medianSalaryUsd | number:'1.0-0' }}</strong>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Department -->
+    <section class="section">
+      <h2>Salary by Department</h2>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Employees</th>
+              <th>Min</th>
+              <th>Median</th>
+              <th>Mean</th>
+              <th>P90</th>
+              <th>Max</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of departmentStats; trackBy: trackByKey">
+              <td>{{ item.label }}</td>
+              <td>{{ item.count | number }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.min) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.median) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.mean) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.p90) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.max) }}</td>
+            </tr>
+
+            <tr *ngIf="departmentStats.length === 0">
+              <td colspan="7" class="empty">No department data available.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Country -->
+    <section class="section">
+      <h2>Salary by Country</h2>
+
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Country</th>
+              <th>Employees</th>
+              <th>Min</th>
+              <th>Median</th>
+              <th>Mean</th>
+              <th>P90</th>
+              <th>Max</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of countryStats; trackBy: trackByKey">
+              <td>{{ item.label }}</td>
+              <td>{{ item.count | number }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.min) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.median) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.mean) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.p90) }}</td>
+              <td>{{ item.currencyCode }} {{ formatCurrency(item.max) }}</td>
+            </tr>
+
+            <tr *ngIf="countryStats.length === 0">
+              <td colspan="7" class="empty">No country data available.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Distribution -->
+    <section class="section">
+      <h2>Salary Distribution</h2>
+
+      <div class="distribution-card">
+
+        <div
+          class="distribution-row"
+          *ngFor="let bucket of distribution; trackBy: trackByRange"
+        >
+          <div class="range">
+            ${{ bucket.rangeStart | number:'1.0-0' }}
+            –
+            ${{ bucket.rangeEnd | number:'1.0-0' }}
+          </div>
+
+          <div class="bar-container">
+            <div
+              class="bar"
+              [style.width.%]="getDistributionWidth(bucket.count)"
+            ></div>
+          </div>
+
+          <div class="count">
+            {{ bucket.count | number }}
+          </div>
+        </div>
+
+        <div *ngIf="distribution.length === 0" class="empty">
+          No salary distribution data available.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Outliers -->
+    <section class="section">
+      <h2>Salary Outliers</h2>
+
+      <div *ngIf="outliers.length > 0" class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Employee</th>
+              <th>Country</th>
+              <th>Job Title</th>
+              <th>Salary</th>
+              <th>Group Median</th>
+              <th>Deviation</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let item of outliers; trackBy: trackByEmployee">
+              <td>
+                {{ item.firstName }} {{ item.lastName }}
+              </td>
+
+              <td>{{ item.countryCode }}</td>
+
+              <td>{{ item.jobTitleTitle }}</td>
+
+              <td>
+                {{ item.currencyCode }}
+                {{ formatCurrency(item.salary) }}
+              </td>
+
+              <td>
+                {{ item.currencyCode }}
+                {{ formatCurrency(item.groupMedian) }}
+              </td>
+
+              <td>
+                {{ item.deviationPct | number:'1.1-1' }}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div *ngIf="outliers.length === 0" class="empty-card">
+        <strong>No salary outliers found</strong>
+        <span>No employees currently exceed the configured deviation threshold.</span>
+      </div>
+
+    </section>
+
+  </ng-container>
+
+</div>

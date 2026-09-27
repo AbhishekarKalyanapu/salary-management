@@ -1,1 +1,196 @@
-<p>csv works!</p>
+<div class="page">
+
+  <div class="page-header">
+    <div>
+      <h1>CSV Import / Export</h1>
+      <p>Import employee salary data or export employee records for reporting.</p>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="message error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="success" class="message success">
+    {{ success }}
+  </div>
+
+  <div class="content-grid">
+
+    <!-- Export -->
+    <section class="card">
+
+      <div class="card-header">
+        <h2>Export Employees</h2>
+        <p>Download employee records as a CSV file.</p>
+      </div>
+
+      <div class="form">
+
+        <div class="form-group">
+          <label for="search">Search</label>
+
+          <input
+            id="search"
+            type="text"
+            [(ngModel)]="search"
+            placeholder="Name, email or employee ID"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+
+          <input
+            id="country"
+            type="text"
+            [(ngModel)]="country"
+            placeholder="Country code, e.g. US"
+          />
+        </div>
+
+        <button
+          class="primary-btn"
+          type="button"
+          (click)="exportEmployees()"
+          [disabled]="exporting"
+        >
+          {{ exporting ? 'Exporting...' : 'Export CSV' }}
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- Import -->
+    <section class="card">
+
+      <div class="card-header">
+        <h2>Import Employees</h2>
+        <p>Upload a CSV file to add employee records.</p>
+      </div>
+
+      <div class="form">
+
+        <div class="upload-area">
+          <label for="csvFile" class="file-label">
+            <span class="file-title">Choose CSV file</span>
+            <span class="file-name">
+              {{ selectedFile ? selectedFile.name : 'No file selected' }}
+            </span>
+          </label>
+
+          <input
+            id="csvFile"
+            type="file"
+            accept=".csv,text/csv"
+            (change)="onFileSelected($event)"
+          />
+        </div>
+
+        <button
+          class="primary-btn"
+          type="button"
+          (click)="importEmployees()"
+          [disabled]="importing || !selectedFile"
+        >
+          {{ importing ? 'Importing...' : 'Import CSV' }}
+        </button>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- Import Result -->
+  <section
+    class="card result-card"
+    *ngIf="importResult"
+  >
+
+    <div class="card-header">
+      <h2>Import Results</h2>
+      <p>Validation and processing summary for the uploaded file.</p>
+    </div>
+
+    <div class="result-summary">
+
+      <div class="result-stat">
+        <span>Total Rows</span>
+        <strong>{{ importResult.totalRows | number }}</strong>
+      </div>
+
+      <div class="result-stat success-stat">
+        <span>Successful</span>
+        <strong>{{ importResult.successCount | number }}</strong>
+      </div>
+
+      <div class="result-stat error-stat">
+        <span>Errors</span>
+        <strong>{{ importResult.errorCount | number }}</strong>
+      </div>
+
+    </div>
+
+    <div
+      *ngIf="importResult.createdEmployeeIds.length > 0"
+      class="created-info"
+    >
+      {{ importResult.createdEmployeeIds.length }}
+      employee record(s) were created successfully.
+    </div>
+
+    <div
+      *ngIf="importResult.errors.length > 0"
+      class="errors-section"
+    >
+
+      <h3>Row Errors</h3>
+
+      <div class="error-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Row</th>
+              <th>Validation Errors</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let row of importResult.errors">
+              <td>{{ row.rowNumber }}</td>
+              <td>
+                <ul>
+                  <li *ngFor="let error of row.errors">
+  <strong>{{ error.field }}</strong>: {{ error.message }}
+</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div
+      *ngIf="importResult.errors.length === 0"
+      class="no-errors"
+    >
+      All rows were imported successfully.
+    </div>
+
+    <div class="result-actions">
+      <button
+        class="secondary-btn"
+        type="button"
+        (click)="clearImport()"
+      >
+        Clear Result
+      </button>
+    </div>
+
+  </section>
+
+</div>

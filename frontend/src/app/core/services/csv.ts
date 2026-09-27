@@ -2,9 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface ValidationError {
+  field: string;
+  message: string;
+}
+
 export interface ImportRowError {
   rowNumber: number;
-  errors: string[];
+  errors: ValidationError[];
 }
 
 export interface ImportResult {

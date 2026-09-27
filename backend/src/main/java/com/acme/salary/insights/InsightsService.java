@@ -1,5 +1,5 @@
 package com.acme.salary.insights;
-
+import java.util.HashMap;
 import com.acme.salary.domain.OutlierDetector;
 import com.acme.salary.employee.Employee;
 import com.acme.salary.employee.EmployeeRepository;
@@ -93,11 +93,23 @@ public class InsightsService {
         List<OutlierDetector.SalaryRecord> records = insightsRepository.allSalaryRecords();
         List<OutlierDetector.Outlier> outliers = outlierDetector.detect(records, thresholdPct, minGroupSize);
 
-        Map<Long, Employee> employeesById = employeeRepository
-                .findAllById(outliers.stream().map(OutlierDetector.Outlier::employeeId).toList())
-                .stream()
-                .collect(Collectors.toMap(Employee::getId, Function.identity()));
+        List<Long> employeeIds = outliers.stream()
+        .map(OutlierDetector.Outlier::employeeId)
+        .toList();
 
+Map<Long, Employee> employeesById = new HashMap<>();
+
+int batchSize = 500;
+
+for (int i = 0; i < employeeIds.size(); i += batchSize) {
+    List<Long> batch = employeeIds.subList(
+            i,
+            Math.min(i + batchSize, employeeIds.size())
+    );
+
+    employeeRepository.findAllById(batch)
+            .forEach(employee -> employeesById.put(employee.getId(), employee));
+}
         return outliers.stream()
                 .map(o -> {
                     Employee e = employeesById.get(o.employeeId());
