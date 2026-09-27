@@ -1,13 +1,19 @@
 import { TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
 
-import { Csv } from './csv';
+import { CsvService } from './csv';
 
-describe('Csv', () => {
-  let service: Csv;
+describe('CsvService', () => {
+  let service: CsvService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(Csv);
+    TestBed.configureTestingModule({
+      providers: [
+        provideHttpClient()
+      ]
+    });
+
+    service = TestBed.inject(CsvService);
   });
 
   it('should be created', () => {

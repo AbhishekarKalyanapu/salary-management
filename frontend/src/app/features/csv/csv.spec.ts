@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 import { Csv } from './csv';
 
@@ -8,9 +9,11 @@ describe('Csv', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Csv]
-    })
-    .compileComponents();
+      imports: [Csv],
+      providers: [
+        provideHttpClient()
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Csv);
     component = fixture.componentInstance;
