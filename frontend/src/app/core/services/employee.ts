@@ -15,7 +15,7 @@ import { PageResponse } from '../models/page-response';
 })
 export class EmployeeService {
 
-  private readonly apiUrl = 'http://localhost:8080/api/employees';
+  private readonly apiUrl = '/api/employees';
 
   constructor(private http: HttpClient) {}
 

@@ -14,7 +14,7 @@ import {
 })
 export class InsightsService {
 
-  private readonly apiUrl = 'http://localhost:8080/api/insights';
+  private readonly apiUrl = '/api/insights';
 
   constructor(private http: HttpClient) {}
 

@@ -25,7 +25,7 @@ export interface ImportResult {
 })
 export class CsvService {
 
-  private readonly apiUrl = 'http://localhost:8080/api/employees';
+  private readonly apiUrl = '/api/employees';
 
   constructor(private http: HttpClient) {}
 

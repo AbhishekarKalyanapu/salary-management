@@ -30,7 +30,7 @@ export interface JobTitle {
 })
 export class ReferenceService {
 
-  private readonly apiUrl = 'http://localhost:8080/api/reference';
+  private readonly apiUrl = '/api/reference';
 
   constructor(private http: HttpClient) {}
 
