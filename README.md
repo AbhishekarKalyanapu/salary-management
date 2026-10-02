@@ -1,6 +1,8 @@
 \# Employee Salary Management
 
+## Live Application
 
+[Open Salary Management Application](https://salary-management-frontend.ambitiousisland-ea49543b.centralindia.azurecontainerapps.io)
 
 A full-stack employee salary management application designed for HR Managers to manage employee records, salary changes, salary history, CSV data exchange, and salary analytics.
 
