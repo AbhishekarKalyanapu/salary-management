@@ -39,7 +39,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 public class SeedRunner implements ApplicationRunner {
 
     private static final Logger log = LoggerFactory.getLogger(SeedRunner.class);
-    private static final int BATCH_SIZE = 1000;
+    private static final int BATCH_SIZE = 100;
 
     private static final String INSERT_EMPLOYEE =
             "INSERT INTO employee (first_name, last_name, email, country_code, department_id, "
